@@ -17,12 +17,14 @@
 #include "HttpResponse.hpp"
 #include "HttpUtils.hpp"
 
-HttpRequest::HttpRequest(const RequestContext& ctx) : _ctx(ctx) {}
+HttpRequest::HttpRequest(const RequestContext &ctx) : _ctx(ctx) {}
 
 // Copy assignment operator (private - not meant to be used)
 // Note: _ctx cannot be reassigned as it's a const reference
-HttpRequest& HttpRequest::operator=(const HttpRequest& other) {
-  if (this != &other) {
+HttpRequest &HttpRequest::operator=(const HttpRequest &other)
+{
+  if (this != &other)
+  {
     // _ctx is a const reference and cannot be reassigned
     // Only copy non-const members
     method = other.method;
@@ -38,76 +40,93 @@ HttpRequest& HttpRequest::operator=(const HttpRequest& other) {
 
 HttpRequest::~HttpRequest() {}
 
-bool HttpRequest::isCgiEnabledForRequest() const {
+bool HttpRequest::isCgiEnabledForRequest() const
+{
   // Location-level setting overrides server-level setting
   // If no location matches, use server-level setting
   // Note: Locations inherit from server if not explicitly set during parsing
-  if (_ctx.location) {
+  if (_ctx.location)
+  {
     return _ctx.location->isCgiEnabled();
   }
   return _ctx.server.isCgiEnabled();
 }
 
-const std::string& HttpRequest::getMethod() const {
+const std::string &HttpRequest::getMethod() const
+{
   return method;
 }
 
-const std::string& HttpRequest::getPath() const {
+const std::string &HttpRequest::getPath() const
+{
   return path;
 }
 
-const std::string& HttpRequest::getVersion() const {
+const std::string &HttpRequest::getVersion() const
+{
   return version;
 }
 
-const std::map<std::string, std::string>& HttpRequest::getHeaders() const {
+const std::map<std::string, std::string> &HttpRequest::getHeaders() const
+{
   return headers;
 }
 
-const std::string& HttpRequest::getBody() const {
+const std::string &HttpRequest::getBody() const
+{
   return body;
 }
 
-const std::map<std::string, std::string>& HttpRequest::getQuery() const {
+const std::map<std::string, std::string> &HttpRequest::getQuery() const
+{
   return query;
 }
 
-void HttpRequest::setMethod(const std::string& m) {
+void HttpRequest::setMethod(const std::string &m)
+{
   method = m;
 }
 
-void HttpRequest::setPath(const std::string& p) {
+void HttpRequest::setPath(const std::string &p)
+{
   path = p;
 }
 
-void HttpRequest::setVersion(const std::string& v) {
+void HttpRequest::setVersion(const std::string &v)
+{
   version = v;
 }
 
-void HttpRequest::setEnabledCgi(bool enabled) {
+void HttpRequest::setEnabledCgi(bool enabled)
+{
   enabledCgi = enabled;
 }
 
-void HttpRequest::addHeader(const std::string& k, const std::string& v) {
+void HttpRequest::addHeader(const std::string &k, const std::string &v)
+{
   headers[k] = v;
 }
 
-void HttpRequest::appendBody(const std::string& data) {
+void HttpRequest::appendBody(const std::string &data)
+{
   body.append(data);
 }
 
-void HttpRequest::setQuery(const std::map<std::string, std::string>& q) {
+void HttpRequest::setQuery(const std::map<std::string, std::string> &q)
+{
   query = q;
 }
 
-bool HttpRequest::validate(std::string& err) const {
+bool HttpRequest::validate(std::string &err) const
+{
   (void)err;
   return true;
 }
 
-bool HttpRequest::isChunked() const {
+bool HttpRequest::isChunked() const
+{
   std::map<std::string, std::string>::const_iterator it =
-    headers.find("transfer-encoding");
+      headers.find("transfer-encoding");
   if (it == headers.end())
     return false;
 
@@ -115,19 +134,22 @@ bool HttpRequest::isChunked() const {
   return (value.find("chunked") != std::string::npos);
 }
 
-size_t HttpRequest::contentLength() const {
+size_t HttpRequest::contentLength() const
+{
   std::map<std::string, std::string>::const_iterator it =
-    headers.find("content-length");
+      headers.find("content-length");
   if (it == headers.end())
     return 0;
   return safeAtoi(it->second);
 }
 
-void HttpRequest::parseQuery(const std::string& target,
-  std::string& cleanPath,
-  std::map<std::string, std::string>& outQuery) {
+void HttpRequest::parseQuery(const std::string &target,
+                             std::string &cleanPath,
+                             std::map<std::string, std::string> &outQuery)
+{
   size_t qpos = target.find('?');
-  if (qpos == std::string::npos) {
+  if (qpos == std::string::npos)
+  {
     cleanPath = target;
     return;
   }
@@ -135,20 +157,23 @@ void HttpRequest::parseQuery(const std::string& target,
   std::string qstr = target.substr(qpos + 1);
 
   size_t start = 0;
-  while (start < qstr.size()) {
+  while (start < qstr.size())
+  {
     size_t eq = qstr.find('=', start);
     size_t amp = qstr.find('&', start);
     std::string key, val;
 
-    if (eq == std::string::npos || (amp != std::string::npos && amp < eq)) {
+    if (eq == std::string::npos || (amp != std::string::npos && amp < eq))
+    {
       key = urlDecode(qstr.substr(
-        start, (amp == std::string::npos ? qstr.size() : amp) - start));
+          start, (amp == std::string::npos ? qstr.size() : amp) - start));
       val = "";
     }
-    else {
+    else
+    {
       key = urlDecode(qstr.substr(start, eq - start));
       val = urlDecode(qstr.substr(
-        eq + 1, (amp == std::string::npos ? qstr.size() : amp) - eq - 1));
+          eq + 1, (amp == std::string::npos ? qstr.size() : amp) - eq - 1));
     }
 
     if (!key.empty())
@@ -159,9 +184,10 @@ void HttpRequest::parseQuery(const std::string& target,
   }
 }
 
-bool HttpRequest::parseHeaderLine(const std::string& line,
-  std::string& k,
-  std::string& v) {
+bool HttpRequest::parseHeaderLine(const std::string &line,
+                                  std::string &k,
+                                  std::string &v)
+{
   size_t colon = line.find(':');
   if (colon == std::string::npos)
     return false;
@@ -170,8 +196,9 @@ bool HttpRequest::parseHeaderLine(const std::string& line,
   return true;
 }
 
-HttpRequest* makeRequestByMethod(const std::string& method,
-  const RequestContext& ctx) {
+HttpRequest *makeRequestByMethod(const std::string &method,
+                                 const RequestContext &ctx)
+{
   if (method == "GET" || method == "HEAD")
     return new GetHeadRequest(ctx);
   if (method == "POST")
@@ -182,92 +209,109 @@ HttpRequest* makeRequestByMethod(const std::string& method,
 }
 
 //--------------------------GET--------------------------
-bool GetHeadRequest::validate(std::string& err) const {
-  if (!body.empty()) {
+bool GetHeadRequest::validate(std::string &err) const
+{
+  if (!body.empty())
+  {
     err = "GET/HEAD request should not have a body";
     return false;
   }
   return true;
 }
 
-GetHeadRequest::GetHeadRequest(const RequestContext& ctx) : HttpRequest(ctx) {}
+GetHeadRequest::GetHeadRequest(const RequestContext &ctx) : HttpRequest(ctx) {}
 
 GetHeadRequest::~GetHeadRequest() {}
 
-void GetHeadRequest::handle(HttpResponse& res,
-  sockaddr_in& clientAddr,
-  int epollFd) {
+void GetHeadRequest::handle(HttpResponse &res,
+                            sockaddr_in &clientAddr,
+                            int epollFd)
+{
   bool includeBody = (method == "GET");
   handleGetOrHead(res, includeBody, clientAddr, epollFd);
 }
 
-void HttpRequest::handleGetOrHead(HttpResponse& res,
-  bool includeBody,
-  sockaddr_in& clientAddr,
-  int epollFd) {
+void HttpRequest::handleGetOrHead(HttpResponse &res,
+                                  bool includeBody,
+                                  sockaddr_in &clientAddr,
+                                  int epollFd)
+{
   // Check for redirect first
-  if (_ctx.hasReturn()) {
-    const std::pair<u_int16_t, std::string>& returnData = _ctx.getReturnData();
+  if (_ctx.hasReturn())
+  {
+    const std::pair<u_int16_t, std::string> &returnData = _ctx.getReturnData();
     res.setVersion("HTTP/1.0");
     res.setRedirect(returnData.first, returnData.second);
     return;
   }
 
-  if (!_ctx.isMethodAllowed(method)) {
+  if (!_ctx.isMethodAllowed(method))
+  {
     res.setErrorFromContext(405, _ctx);
     return;
   }
 
   std::string fullPath = _ctx.getFullPath(path);
+  std::cerr << "[DEBUG] GET path=" << path << " fullPath=" << fullPath << std::endl;
   struct stat fileStat;
   std::memset(&fileStat, 0, sizeof(fileStat));
 
-  if (stat(fullPath.c_str(), &fileStat) != 0) {
+  if (stat(fullPath.c_str(), &fileStat) != 0)
+  {
+    std::cerr << "[DEBUG] File not found: " << fullPath << " errno=" << errno << std::endl;
     res.setErrorFromContext(404, _ctx);
     return;
   }
 
   // Check if CGI is enabled (location overrides server setting) and file is not
   // a directory
-  if (isCgiEnabledForRequest() && !S_ISDIR(fileStat.st_mode)) {
+  if (isCgiEnabledForRequest() && !S_ISDIR(fileStat.st_mode))
+  {
     // Handle CGI requests
     CgiHandle cgiHandler;
     std::string scriptPath = _ctx.getFullPath(path);
-    if (scriptPath.empty()) {
+    if (scriptPath.empty())
+    {
       res.setErrorFromContext(500, _ctx);
       return;
     }
     struct stat scriptStat;
     std::memset(&scriptStat, 0, sizeof(scriptStat));
     if (stat(scriptPath.c_str(), &scriptStat) != 0 ||
-      !(scriptStat.st_mode & S_IXUSR)) {
+        !(scriptStat.st_mode & S_IXUSR))
+    {
       res.setErrorFromContext(403, _ctx);
       return;
     }
     cgiHandler.buildCgiScript(scriptPath, _ctx, res, *this, clientAddr,
-      epollFd);
+                              epollFd);
     return;
   }
 
-  if (S_ISDIR(fileStat.st_mode)) {
+  if (S_ISDIR(fileStat.st_mode))
+  {
     bool found = false;
-    const std::vector<std::string>& indexFiles = _ctx.getIndexFiles();
-    for (size_t i = 0; i < indexFiles.size(); i++) {
+    const std::vector<std::string> &indexFiles = _ctx.getIndexFiles();
+    for (size_t i = 0; i < indexFiles.size(); i++)
+    {
       std::string indexPath = fullPath;
       if (fullPath.empty() || fullPath[fullPath.size() - 1] != '/')
         indexPath += '/';
       indexPath += indexFiles[i];
 
-      if (stat(indexPath.c_str(), &fileStat) == 0) {
+      if (stat(indexPath.c_str(), &fileStat) == 0)
+      {
         fullPath = indexPath;
         found = true;
         break;
       }
     }
 
-    if (!found) {
+    if (!found)
+    {
       std::cerr << "is enabled autoindex: " << _ctx.getAutoIndex() << "\n";
-      if (_ctx.getAutoIndex()) {
+      if (_ctx.getAutoIndex())
+      {
         std::string page = generateAutoIndexPage(fullPath, path);
         if (includeBody)
           res.setBody(page);
@@ -284,7 +328,8 @@ void HttpRequest::handleGetOrHead(HttpResponse& res,
   }
 
   std::ifstream file(fullPath.c_str(), std::ios::binary);
-  if (!file.is_open()) {
+  if (!file.is_open())
+  {
     res.setErrorFromContext(403, _ctx);
     return;
   }
@@ -304,61 +349,71 @@ void HttpRequest::handleGetOrHead(HttpResponse& res,
 }
 
 //--------------------------POST--------------------------
-bool PostRequest::validate(std::string& err) const {
+bool PostRequest::validate(std::string &err) const
+{
   // For chunked requests, body might exist even without Content-Length
   // initially After un-chunking, the parser should have set Content-Length Also
   // allow requests with actual body content even if Content-Length is 0
-  if (contentLength() == 0 && body.empty()) {
+  if (contentLength() == 0 && body.empty())
+  {
     err = "Missing body in POST request";
     return false;
   }
   return true;
 }
 
-PostRequest::PostRequest(const RequestContext& ctx) : HttpRequest(ctx) {}
+PostRequest::PostRequest(const RequestContext &ctx) : HttpRequest(ctx) {}
 
 PostRequest::~PostRequest() {}
 
-bool PostRequest::isPathSafe(const std::string& path) const {
+bool PostRequest::isPathSafe(const std::string &path) const
+{
   if (path.find("..") != std::string::npos)
     return false;
   return true;
 }
 
-void PostRequest::handle(HttpResponse& res,
-  sockaddr_in& clientAddr,
-  int epollFd) {
-  if (!_ctx.isMethodAllowed("POST")) {
+void PostRequest::handle(HttpResponse &res,
+                         sockaddr_in &clientAddr,
+                         int epollFd)
+{
+  if (!_ctx.isMethodAllowed("POST"))
+  {
     res.setErrorFromContext(405, _ctx);
     return;
   }
 
   // Check if CGI is enabled (location overrides server setting)
-  if (isCgiEnabledForRequest()) {
+  if (isCgiEnabledForRequest())
+  {
     // Handle CGI requests
     CgiHandle cgiHandler;
     std::string scriptPath = _ctx.getFullPath(path);
-    if (scriptPath.empty()) {
+    if (scriptPath.empty())
+    {
       res.setErrorFromContext(500, _ctx);
       return;
     }
     struct stat scriptStat;
-    std::memset(&scriptStat, 0, sizeof(scriptStat));  // Initialize to zero
+    std::memset(&scriptStat, 0, sizeof(scriptStat)); // Initialize to zero
     if (stat(scriptPath.c_str(), &scriptStat) != 0 ||
-      !(scriptStat.st_mode & S_IXUSR)) {
+        !(scriptStat.st_mode & S_IXUSR))
+    {
       res.setErrorFromContext(403, _ctx);
       return;
     }
     // Execute the CGI script
     cgiHandler.buildCgiScript(scriptPath, _ctx, res, *this, clientAddr,
-      epollFd);
+                              epollFd);
     return;
   }
   std::string uploadDir;
-  if (_ctx.location && !_ctx.location->getUploadDir().empty()) {
+  if (_ctx.location && !_ctx.location->getUploadDir().empty())
+  {
     uploadDir = _ctx.location->getUploadDir();
   }
-  else {
+  else
+  {
     uploadDir = _ctx.server.getRoot();
   }
 
@@ -366,7 +421,8 @@ void PostRequest::handle(HttpResponse& res,
     uploadDir += '/';
 
   std::string filename = extractFileName(path);
-  if (filename.empty()) {
+  if (filename.empty())
+  {
     std::time_t now = std::time(0);
     std::ostringstream oss;
     oss << "upload_" << now << ".txt";
@@ -374,32 +430,37 @@ void PostRequest::handle(HttpResponse& res,
   }
 
   std::string fullPath = uploadDir + filename;
-  if (!isPathSafe(fullPath)) {
+  if (!isPathSafe(fullPath))
+  {
     res.setErrorFromContext(403, _ctx);
     return;
   }
 
   bool createdNew = true;
   std::ifstream checkFile(fullPath.c_str());
-  if (checkFile.good()) {
+  if (checkFile.good())
+  {
     createdNew = false;
   }
   checkFile.close();
 
   std::ofstream outFile(fullPath.c_str(), std::ios::out | std::ios::binary);
-  if (!outFile.is_open()) {
+  if (!outFile.is_open())
+  {
     res.setErrorFromContext(500, _ctx);
     return;
   }
   outFile << body;
   outFile.close();
 
-  if (createdNew) {
+  if (createdNew)
+  {
     res.setStatus(201, "Created");
     res.setHeader("Content-Length", "0");
     res.setHeader("Content-Type", "text/plain");
   }
-  else {
+  else
+  {
     std::ostringstream msg;
     msg << "File updated successfully: " << filename << "\n";
     std::string msgStr = msg.str();
@@ -414,19 +475,22 @@ void PostRequest::handle(HttpResponse& res,
   }
 }
 
-DeleteRequest::DeleteRequest(const RequestContext& ctx) : HttpRequest(ctx) {}
+DeleteRequest::DeleteRequest(const RequestContext &ctx) : HttpRequest(ctx) {}
 
 DeleteRequest::~DeleteRequest() {}
 
-bool DeleteRequest::validate(std::string& err) const {
-  if (!body.empty()) {
+bool DeleteRequest::validate(std::string &err) const
+{
+  if (!body.empty())
+  {
     err = "DELETE request should not have a body";
     return false;
   }
   return true;
 }
 
-bool DeleteRequest::isPathSafe(const std::string& fullPath) const {
+bool DeleteRequest::isPathSafe(const std::string &fullPath) const
+{
   if (fullPath.find("..") != std::string::npos)
     return false;
 
@@ -437,37 +501,43 @@ bool DeleteRequest::isPathSafe(const std::string& fullPath) const {
   return true;
 }
 
-void DeleteRequest::handle(HttpResponse& res,
-  sockaddr_in& clientAddr,
-  int epollFd) {
+void DeleteRequest::handle(HttpResponse &res,
+                           sockaddr_in &clientAddr,
+                           int epollFd)
+{
   (void)epollFd;
   (void)clientAddr;
-  if (!_ctx.isMethodAllowed("DELETE")) {
+  if (!_ctx.isMethodAllowed("DELETE"))
+  {
     res.setErrorFromContext(405, _ctx);
     return;
   }
 
   std::string fullPath = _ctx.getFullPath(path);
 
-  if (!isPathSafe(fullPath)) {
+  if (!isPathSafe(fullPath))
+  {
     res.setErrorFromContext(403, _ctx);
     return;
   }
 
   struct stat fileStat;
-  std::memset(&fileStat, 0, sizeof(fileStat));  // Initialize to zero
-  if (stat(fullPath.c_str(), &fileStat) != 0) {
+  std::memset(&fileStat, 0, sizeof(fileStat)); // Initialize to zero
+  if (stat(fullPath.c_str(), &fileStat) != 0)
+  {
     res.setErrorFromContext(404, _ctx);
     return;
   }
 
   int result;
-  if (S_ISDIR(fileStat.st_mode)) {
+  if (S_ISDIR(fileStat.st_mode))
+  {
     // Nginx-style: only delete empty directories, return 409 Conflict if not
     // empty
     result = rmdir(fullPath.c_str());
 
-    if (result != 0 && errno == ENOTEMPTY) {
+    if (result != 0 && errno == ENOTEMPTY)
+    {
       res.setStatus(409, "Conflict");
       res.setHeader("Content-Type", "text/plain");
       std::string body = "Cannot delete non-empty directory";
@@ -478,15 +548,19 @@ void DeleteRequest::handle(HttpResponse& res,
       return;
     }
   }
-  else {
+  else
+  {
     result = remove(fullPath.c_str());
   }
 
-  if (result != 0) {
-    if (errno == EACCES || errno == EPERM) {
+  if (result != 0)
+  {
+    if (errno == EACCES || errno == EPERM)
+    {
       res.setErrorFromContext(403, _ctx);
     }
-    else {
+    else
+    {
       res.setErrorFromContext(500, _ctx);
     }
     return;
