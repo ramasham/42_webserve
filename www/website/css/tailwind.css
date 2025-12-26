@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Swiss Horizon Palette - Primary Colors */
+    --color-primary: #2C5F41; /* Deep forest confidence - custom green-800 */
+    --color-primary-50: #E8F0EC; /* Lightest forest mist */
+    --color-primary-100: #D1E1D9; /* Light forest */
+    --color-primary-200: #A3C3B3; /* Medium-light forest */
+    --color-primary-300: #75A58D; /* Medium forest */
+    --color-primary-400: #478767; /* Medium-dark forest */
+    --color-primary-500: #2C5F41; /* Base primary - deep forest */
+    --color-primary-600: #234C34; /* Darker forest */
+    --color-primary-700: #1A3927; /* Very dark forest */
+    --color-primary-800: #12261A; /* Almost black forest */
+    --color-primary-900: #09130D; /* Deepest forest */
+
+    /* Secondary Colors - Mountain Meadow */
+    --color-secondary: #7BA05B; /* Mountain meadow warmth - custom green-500 */
+    --color-secondary-50: #F2F6ED; /* Lightest meadow */
+    --color-secondary-100: #E5EDDB; /* Light meadow */
+    --color-secondary-200: #CBDBB7; /* Medium-light meadow */
+    --color-secondary-300: #B1C993; /* Medium meadow */
+    --color-secondary-400: #97B76F; /* Medium-dark meadow */
+    --color-secondary-500: #7BA05B; /* Base secondary */
+    --color-secondary-600: #628049; /* Darker meadow */
+    --color-secondary-700: #4A6037; /* Very dark meadow */
+    --color-secondary-800: #314025; /* Almost black meadow */
+    --color-secondary-900: #192012; /* Deepest meadow */
+
+    /* Accent Colors - Golden Hour */
+    --color-accent: #D4AF37; /* Golden hour inspiration - custom yellow-600 */
+    --color-accent-50: #FAF6E8; /* Lightest gold */
+    --color-accent-100: #F5EDD1; /* Light gold */
+    --color-accent-200: #EBDBA3; /* Medium-light gold */
+    --color-accent-300: #E1C975; /* Medium gold */
+    --color-accent-400: #D7B747; /* Medium-dark gold */
+    --color-accent-500: #D4AF37; /* Base accent */
+    --color-accent-600: #AA8C2C; /* Darker gold */
+    --color-accent-700: #7F6921; /* Very dark gold */
+    --color-accent-800: #554616; /* Almost black gold */
+    --color-accent-900: #2A230B; /* Deepest gold */
+
+    /* Background Colors - Pristine Snow */
+    --color-background: #FAFBFC; /* Pristine snow canvas - custom gray-50 */
+    --color-surface: #F5F7F8; /* Subtle cloud depth - custom gray-100 */
+    --color-surface-hover: #EEF1F3; /* Surface hover state */
+    --color-border: #E5E9EA; /* Form inputs and data separation */
+
+    /* Text Colors - Mountain Air Clarity */
+    --color-text-primary: #1A2B23; /* Clear mountain air readability - custom gray-900 */
+    --color-text-secondary: #4A5D52; /* Gentle hierarchy guidance - custom gray-600 */
+    --color-text-tertiary: #6B7F75; /* Subtle supporting text */
+
+    /* Semantic Colors */
+    --color-success: #5C8A3A; /* Alpine growth confirmation - custom green-600 */
+    --color-success-light: #E8F3E0; /* Success background */
+    --color-warning: #B8860B; /* Careful attention signal - custom yellow-700 */
+    --color-warning-light: #FDF6E3; /* Warning background */
+    --color-error: #8B4513; /* Warm concern communication - custom orange-800 */
+    --color-error-light: #FDF0E8; /* Error background */
+
+    /* Interactive States */
+    --color-hover-overlay: rgba(44, 95, 65, 0.08); /* Primary hover overlay */
+    --color-active-overlay: rgba(44, 95, 65, 0.12); /* Primary active overlay */
+    --color-focus-ring: rgba(44, 95, 65, 0.3); /* Focus ring color */
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-text-primary font-body antialiased;
+    font-feature-settings: "kern" 1, "liga" 1;
+  }
+
+  /* Typography Base Styles */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline text-text-primary;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  h1 {
+    @apply text-5xl md:text-6xl lg:text-7xl;
+  }
+
+  h2 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h3 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  h4 {
+    @apply text-2xl md:text-3xl lg:text-4xl;
+  }
+
+  h5 {
+    @apply text-xl md:text-2xl lg:text-3xl;
+  }
+
+  h6 {
+    @apply text-lg md:text-xl lg:text-2xl;
+  }
+
+  p {
+    @apply text-base md:text-lg leading-relaxed;
+  }
+
+  /* Form Elements */
+  input, textarea, select {
+    @apply border-border bg-background text-text-primary;
+    transition: border-color 300ms ease-out, background-color 300ms ease-out;
+  }
+
+  input:focus, textarea:focus, select:focus {
+    @apply outline-none ring-2 ring-primary/30 border-primary;
+  }
+
+  /* Button Base */
+  button {
+    @apply font-cta font-medium;
+    transition: all 300ms ease-out;
+  }
+}
+
+@layer components {
+  /* Destination Card Hover Animation */
+  .destination-card {
+    @apply bg-surface rounded-lg overflow-hidden;
+    transition: transform 300ms ease-out, background-color 300ms ease-out;
+  }
+
+  .destination-card:hover {
+    @apply bg-surface-hover;
+    transform: translateY(-8px);
+  }
+
+  .destination-card-image {
+    transition: transform 450ms ease-out;
+  }
+
+  .destination-card:hover .destination-card-image {
+    transform: scale(1.05);
+  }
+
+  /* CTA Buttons */
+  .btn-primary {
+    @apply bg-primary text-white px-8 py-4 rounded-lg font-cta font-semibold;
+    transition: background-color 300ms ease-out, transform 150ms ease-out;
+  }
+
+  .btn-primary:hover {
+    @apply bg-primary-600;
+    transform: translateY(-2px);
+  }
+
+  .btn-primary:active {
+    transform: translateY(0);
+  }
+
+  .btn-accent {
+    @apply bg-accent text-text-primary px-8 py-4 rounded-lg font-cta font-semibold;
+    transition: background-color 300ms ease-out, transform 150ms ease-out;
+  }
+
+  .btn-accent:hover {
+    @apply bg-accent-600;
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-white px-8 py-4 rounded-lg font-cta font-semibold;
+    transition: background-color 300ms ease-out, transform 150ms ease-out;
+  }
+
+  .btn-secondary:hover {
+    @apply bg-secondary-600;
+    transform: translateY(-2px);
+  }
+
+  /* Fade-in Animation */
+  .fade-in {
+    animation: fadeIn 600ms ease-out forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Staggered Card Grid Animation */
+  .card-grid > * {
+    animation: fadeIn 600ms ease-out forwards;
+    opacity: 0;
+  }
+
+  .card-grid > *:nth-child(1) { animation-delay: 0ms; }
+  .card-grid > *:nth-child(2) { animation-delay: 150ms; }
+  .card-grid > *:nth-child(3) { animation-delay: 300ms; }
+  .card-grid > *:nth-child(4) { animation-delay: 450ms; }
+  .card-grid > *:nth-child(5) { animation-delay: 600ms; }
+  .card-grid > *:nth-child(6) { animation-delay: 750ms; }
+
+  /* Parallax Container */
+  .parallax-container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .parallax-layer {
+    transition: transform 100ms linear;
+  }
+
+  /* Form Styles */
+  .form-input {
+    @apply w-full px-4 py-3 border border-border rounded-lg bg-background text-text-primary;
+    transition: border-color 300ms ease-out, box-shadow 300ms ease-out;
+  }
+
+  .form-input:focus {
+    @apply border-primary outline-none;
+    box-shadow: 0 0 0 3px var(--color-focus-ring);
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-text-secondary mb-2;
+  }
+
+  /* Section Spacing */
+  .section-padding {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+
+  .container-padding {
+    @apply px-4 md:px-6 lg:px-8;
+  }
+
+  /* Accent Text Styles */
+  .accent-text {
+    @apply font-accent text-accent;
+  }
+
+  .destination-name {
+    @apply font-accent text-2xl md:text-3xl lg:text-4xl;
+  }
+
+  /* Success/Warning/Error States */
+  .alert-success {
+    @apply bg-success-light border-l-4 border-success text-success p-4 rounded;
+  }
+
+  .alert-warning {
+    @apply bg-warning-light border-l-4 border-warning text-warning p-4 rounded;
+  }
+
+  .alert-error {
+    @apply bg-error-light border-l-4 border-error text-error p-4 rounded;
+  }
+
+  /* Subtle Depth Without Shadows */
+  .card-elevation {
+    @apply bg-surface border border-transparent;
+    transition: background-color 300ms ease-out, border-color 300ms ease-out;
+  }
+
+  .card-elevation:hover {
+    @apply bg-surface-hover border-border;
+  }
+}
+
+@layer utilities {
+  /* Text Utilities */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Smooth Scroll */
+  .smooth-scroll {
+    scroll-behavior: smooth;
+  }
+
+  /* Focus Visible Only */
+  .focus-visible-only:focus {
+    @apply outline-none;
+  }
+
+  .focus-visible-only:focus-visible {
+    @apply ring-2 ring-primary/30 outline-none;
+  }
+
+  /* Gradient Overlays */
+  .gradient-overlay-dark {
+    background: linear-gradient(180deg, rgba(26, 43, 35, 0) 0%, rgba(26, 43, 35, 0.7) 100%);
+  }
+
+  .gradient-overlay-light {
+    background: linear-gradient(180deg, rgba(250, 251, 252, 0) 0%, rgba(250, 251, 252, 0.95) 100%);
+  }
+
+  /* Aspect Ratios */
+  .aspect-hero {
+    aspect-ratio: 16 / 9;
+  }
+
+  .aspect-card {
+    aspect-ratio: 4 / 3;
+  }
+
+  .aspect-portrait {
+    aspect-ratio: 3 / 4;
+  }
+
+  /* Animation Delays */
+  .delay-150 {
+    animation-delay: 150ms;
+  }
+
+  .delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .delay-450 {
+    animation-delay: 450ms;
+  }
+
+  .delay-600 {
+    animation-delay: 600ms;
+  }
+}

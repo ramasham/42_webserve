@@ -1,0 +1,1725 @@
+<!DOCTYPE html>
+<html lang="en" class="smooth-scroll">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explore Switzerland's most breathtaking destinations. From alpine peaks to serene lakes, discover hidden gems and authentic experiences that make Switzerland unforgettable.">
+    <title>Destinations - Swiss Journey | Discover Switzerland's Hidden Gems</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <script type="module" async
+        src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fswissjour5887back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.12"></script>
+    <script type="module" defer src="https://static.rocket.new/rocket-shot.js?v=0.0.2"></script>
+</head>
+
+<body class="bg-background">
+    <!-- Navigation Header -->
+    <header
+        class="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border transition-all duration-300"
+        id="mainHeader">
+        <nav class="container mx-auto container-padding">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="homepage.html" class="flex items-center gap-3 group">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="transition-transform duration-300 group-hover:scale-105">
+                        <!-- Mountain background -->
+                        <path d="M4 38L16 18L24 28L32 14L44 38H4Z" fill="#2C5F41" />
+                        <path d="M12 38L20 24L28 32L36 22L44 38H12Z" fill="#7BA05B" opacity="0.8" />
+                        <!-- Snow caps -->
+                        <path d="M16 18L18 22L14 22L16 18Z" fill="white" />
+                        <path d="M32 14L35 20L29 20L32 14Z" fill="white" />
+                        <!-- Train track -->
+                        <rect x="2" y="36" width="44" height="3" fill="#1a3a28" />
+                        <line x1="6" y1="36" x2="6" y2="39" stroke="#D4AF37" stroke-width="1.5" />
+                        <line x1="12" y1="36" x2="12" y2="39" stroke="#D4AF37" stroke-width="1.5" />
+                        <line x1="18" y1="36" x2="18" y2="39" stroke="#D4AF37" stroke-width="1.5" />
+                        <line x1="24" y1="36" x2="24" y2="39" stroke="#D4AF37" stroke-width="1.5" />
+                        <line x1="30" y1="36" x2="30" y2="39" stroke="#D4AF37" stroke-width="1.5" />
+                        <line x1="36" y1="36" x2="36" y2="39" stroke="#D4AF37" stroke-width="1.5" />
+                        <line x1="42" y1="36" x2="42" y2="39" stroke="#D4AF37" stroke-width="1.5" />
+                        <!-- Train -->
+                        <rect x="8" y="28" width="20" height="8" rx="2" fill="#D4AF37" />
+                        <rect x="10" y="30" width="5" height="4" rx="1" fill="#2C5F41" />
+                        <rect x="17" y="30" width="5" height="4" rx="1" fill="#2C5F41" />
+                        <circle cx="12" cy="36" r="2" fill="#1a3a28" />
+                        <circle cx="24" cy="36" r="2" fill="#1a3a28" />
+                        <!-- Sun -->
+                        <circle cx="40" cy="10" r="5" fill="#D4AF37" />
+                    </svg>
+                    <span class="font-headline text-2xl font-semibold text-primary">Swiss Journey</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="homepage.html"
+                        class="font-body text-base text-text-secondary hover:text-primary transition-colors duration-300">Home</a>
+                    <a href="destination.html"
+                        class="font-body text-base text-primary font-medium border-b-2 border-primary pb-1 transition-colors duration-300">Destinations</a>
+                    <a href="about.html"
+                        class="font-body text-base text-text-secondary hover:text-primary transition-colors duration-300">About</a>
+                    <a href="journey_planner.html"
+                        class="font-body text-base text-text-secondary hover:text-primary transition-colors duration-300">Journey
+                        Planner</a>
+                    <a href="community.html"
+                        class="font-body text-base text-text-secondary hover:text-primary transition-colors duration-300">Community</a>
+                    <a href="contact.html" class="btn-primary">Get Started</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="lg:hidden p-2 text-primary" aria-label="Toggle mobile menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobileMenu" class="hidden lg:hidden pb-6">
+                <div class="flex flex-col gap-4">
+                    <a href="homepage.html"
+                        class="font-body text-base text-text-secondary hover:text-primary py-2 pl-4 transition-colors duration-300">Home</a>
+                    <a href="destination.html"
+                        class="font-body text-base text-primary font-medium py-2 border-l-4 border-primary pl-4">Destinations</a>
+                    <a href="about.html"
+                        class="font-body text-base text-text-secondary hover:text-primary py-2 pl-4 transition-colors duration-300">About</a>
+                    <a href="journey_planner.html"
+                        class="font-body text-base text-text-secondary hover:text-primary py-2 pl-4 transition-colors duration-300">Journey
+                        Planner</a>
+                    <a href="community.html"
+                        class="font-body text-base text-text-secondary hover:text-primary py-2 pl-4 transition-colors duration-300">Community</a>
+                    <a href="contact.html" class="btn-primary w-full text-center mt-2">Get Started</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section - Clean Modern Style -->
+    <section class="relative min-h-[60vh] flex items-center overflow-hidden pt-20">
+        <!-- Background Image -->
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1580738958875-d6a0c598b2cf?w=3840&q=100"
+                alt="Panoramic view of Swiss Alps with multiple mountain peaks covered in snow under clear blue sky"
+                class="w-full h-full object-cover" loading="eager"
+                onerror="this.src='https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=3840&q=100'; this.onerror=null;">
+        </div>
+
+        <!-- Gradient Overlay - Left side darker -->
+        <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
+
+        <!-- Hero Content - Left aligned -->
+        <div class="relative z-10 container mx-auto container-padding">
+            <div class="max-w-2xl fade-in">
+                <p class="font-accent text-xl md:text-2xl mb-4 text-white">Explore Switzerland</p>
+                <h1 class="font-headline text-white text-5xl md:text-7xl mb-6 leading-tight">
+                    Swiss<br />
+                    <span class="text-[#7BA05B]">Destinations</span>
+                </h1>
+                <p class="text-white/90 text-lg md:text-xl mb-10 leading-relaxed max-w-lg">
+                    From majestic alpine peaks to serene lakeside villages, find the authentic Swiss experiences that
+                    speak to your soul.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search & Filter Section -->
+    <section class="section-padding bg-surface">
+        <div class="container mx-auto container-padding">
+            <div class="max-w-5xl mx-auto">
+                <!-- Search Bar -->
+                <div class="mb-8">
+                    <div class="relative">
+                        <input type="text" id="searchInput" placeholder="Search destinations, activities, or regions..."
+                            class="form-input pl-12 pr-12 py-4 text-lg" aria-label="Search destinations">
+                        <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-6 h-6 text-text-secondary" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                        <button id="clearSearch"
+                            class="hidden absolute right-4 top-1/2 -translate-y-1/2 text-text-secondary hover:text-primary transition-colors duration-300"
+                            aria-label="Clear search">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Filter Controls -->
+                <div class="flex flex-wrap gap-4 items-center justify-between">
+                    <div class="flex flex-wrap gap-3">
+                        <!-- Season Filter -->
+                        <button class="filter-btn active" data-filter="all">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            All Seasons
+                        </button>
+                        <button class="filter-btn" data-filter="winter">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M12 2v20M2 12h20M6.34 6.34l11.32 11.32M17.66 6.34L6.34 17.66"></path>
+                            </svg>
+                            Winter
+                        </button>
+                        <button class="filter-btn" data-filter="summer">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="5"></circle>
+                                <line x1="12" y1="1" x2="12" y2="3"></line>
+                                <line x1="12" y1="21" x2="12" y2="23"></line>
+                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                <line x1="1" y1="12" x2="3" y2="12"></line>
+                                <line x1="21" y1="12" x2="23" y2="12"></line>
+                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                            </svg>
+                            Summer
+                        </button>
+
+                        <!-- Activity Filter -->
+                        <button class="filter-btn" data-filter="adventure">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="4 17 10 11 4 5"></polyline>
+                                <line x1="12" y1="19" x2="20" y2="19"></line>
+                            </svg>
+                            Adventure
+                        </button>
+                        <button class="filter-btn" data-filter="culture">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                            </svg>
+                            Culture
+                        </button>
+                        <button class="filter-btn" data-filter="relaxation">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                            </svg>
+                            Relaxation
+                        </button>
+                    </div>
+
+                    <!-- Reset Filters -->
+                    <button id="resetFilters"
+                        class="hidden text-primary font-cta font-medium hover:text-primary-600 transition-colors duration-300 flex items-center gap-2">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="1 4 1 10 7 10"></polyline>
+                            <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+                        </svg>
+                        Reset Filters
+                    </button>
+                </div>
+
+                <!-- Active Filters Display -->
+                <div id="activeFilters" class="hidden mt-6 flex flex-wrap gap-2"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations Grid -->
+    <section class="section-padding bg-background">
+        <div class="container mx-auto container-padding">
+            <!-- Results Count -->
+            <div class="mb-8 flex items-center justify-between">
+                <p class="text-text-secondary text-lg">
+                    Showing <span id="resultsCount" class="font-semibold text-primary">12</span> destinations
+                </p>
+                <select id="sortSelect" class="form-input w-auto" aria-label="Sort destinations">
+                    <option value="featured">Featured</option>
+                    <option value="name">Name (A-Z)</option>
+                    <option value="popularity">Most Popular</option>
+                </select>
+            </div>
+
+            <!-- Destinations Grid -->
+            <div id="destinationsGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 card-grid">
+                <!-- Destination Card 1 - Jungfrau Region -->
+                <article class="destination-card card-elevation rounded-xl overflow-hidden" data-season="winter summer"
+                    data-activity="adventure culture" data-region="bernese-oberland">
+                    <div class="relative aspect-card overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1726335119304-2df333e28fb8"
+                            alt="Majestic Jungfrau mountain peak with Aletsch Glacier and surrounding Alpine landscape under clear sky"
+                            class="destination-card-image w-full h-full object-cover" loading="lazy"
+                            onerror="this.src='https://images.pexels.com/photos/1450353/pexels-photo-1450353.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+                        <div class="absolute top-4 right-4">
+                            <button
+                                class="favorite-btn w-10 h-10 bg-white/90 hover:bg-white rounded-full flex items-center justify-center transition-all duration-300"
+                                data-destination="Jungfrau Region" aria-label="Add Jungfrau Region to favorites">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div
+                            class="absolute inset-0 gradient-overlay-dark opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <div class="text-white">
+                                <p class="text-sm mb-2">UNESCO World Heritage Site</p>
+                                <p class="text-sm">Experience the Top of Europe at 3,454m elevation</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span
+                                class="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">Adventure</span>
+                            <span
+                                class="px-3 py-1 bg-secondary/10 text-secondary text-xs font-medium rounded-full">Year-Round</span>
+                        </div>
+                        <h3 class="destination-name text-primary mb-3">Jungfrau Region</h3>
+                        <p class="text-text-secondary mb-4">Journey to the highest railway station in Europe and witness
+                            the breathtaking Aletsch Glacier, the longest glacier in the Alps.</p>
+                        <div class="flex items-center gap-4 mb-4 text-sm text-text-secondary">
+                            <div class="flex items-center gap-1">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                Bernese Oberland
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                    </polygon>
+                                </svg>
+                                4.9/5
+                            </div>
+                        </div>
+                        <a href="javascript:void(0)"
+                            class="inline-flex items-center gap-2 text-primary font-cta font-medium hover:gap-3 transition-all duration-300">
+                            Explore Details
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Destination Card 2 - Lake Geneva -->
+                <article class="destination-card card-elevation rounded-xl overflow-hidden" data-season="summer"
+                    data-activity="culture relaxation" data-region="lake-geneva">
+                    <div class="relative aspect-card overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1456152634153-fb77feb794a7"
+                            alt="Stunning sunset over Lake Geneva with vineyard terraces in foreground and snow-capped Alps in background"
+                            class="destination-card-image w-full h-full object-cover" loading="lazy"
+                            onerror="this.src='https://images.pixabay.com/photo/2016/11/29/03/36/architecture-1867187_1280.jpg'; this.onerror=null;">
+                        <div class="absolute top-4 right-4">
+                            <button
+                                class="favorite-btn w-10 h-10 bg-white/90 hover:bg-white rounded-full flex items-center justify-center transition-all duration-300"
+                                data-destination="Lake Geneva" aria-label="Add Lake Geneva to favorites">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div
+                            class="absolute inset-0 gradient-overlay-dark opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <div class="text-white">
+                                <p class="text-sm mb-2">Lavaux Vineyard Terraces (UNESCO)</p>
+                                <p class="text-sm">Discover Belle Époque elegance and Mediterranean charm</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span
+                                class="px-3 py-1 bg-accent/10 text-accent text-xs font-medium rounded-full">Culture</span>
+                            <span
+                                class="px-3 py-1 bg-secondary/10 text-secondary text-xs font-medium rounded-full">Summer</span>
+                        </div>
+                        <h3 class="destination-name text-primary mb-3">Lake Geneva</h3>
+                        <p class="text-text-secondary mb-4">Experience sophisticated charm along Switzerland's largest
+                            lake, from Olympic Lausanne to jazz haven Montreux and UNESCO vineyard terraces.</p>
+                        <div class="flex items-center gap-4 mb-4 text-sm text-text-secondary">
+                            <div class="flex items-center gap-1">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                Lake Geneva Region
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                    </polygon>
+                                </svg>
+                                4.8/5
+                            </div>
+                        </div>
+                        <a href="javascript:void(0)"
+                            class="inline-flex items-center gap-2 text-primary font-cta font-medium hover:gap-3 transition-all duration-300">
+                            Explore Details
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Destination Card 3 - Zermatt -->
+                <article class="destination-card card-elevation rounded-xl overflow-hidden" data-season="winter summer"
+                    data-activity="adventure" data-region="valais">
+                    <div class="relative aspect-card overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1685038207764-ba79b17d8ba5"
+                            alt="Iconic Matterhorn mountain peak towering over traditional Swiss chalets in car-free Zermatt village"
+                            class="destination-card-image w-full h-full object-cover" loading="lazy"
+                            onerror="this.src='https://images.pexels.com/photos/1660995/pexels-photo-1660995.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+                        <div class="absolute top-4 right-4">
+                            <button
+                                class="favorite-btn w-10 h-10 bg-white/90 hover:bg-white rounded-full flex items-center justify-center transition-all duration-300"
+                                data-destination="Zermatt" aria-label="Add Zermatt to favorites">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div
+                            class="absolute inset-0 gradient-overlay-dark opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <div class="text-white">
+                                <p class="text-sm mb-2">365 Days of Skiing</p>
+                                <p class="text-sm">Car-free alpine paradise beneath the Matterhorn</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span
+                                class="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">Adventure</span>
+                            <span
+                                class="px-3 py-1 bg-secondary/10 text-secondary text-xs font-medium rounded-full">Year-Round</span>
+                        </div>
+                        <h3 class="destination-name text-primary mb-3">Zermatt</h3>
+                        <p class="text-text-secondary mb-4">Stand in awe of the iconic Matterhorn in this car-free
+                            alpine village offering world-class skiing and mountaineering heritage.</p>
+                        <div class="flex items-center gap-4 mb-4 text-sm text-text-secondary">
+                            <div class="flex items-center gap-1">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                Valais
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                    </polygon>
+                                </svg>
+                                5.0/5
+                            </div>
+                        </div>
+                        <a href="javascript:void(0)"
+                            class="inline-flex items-center gap-2 text-primary font-cta font-medium hover:gap-3 transition-all duration-300">
+                            Explore Details
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Destination Card 4 - Lucerne -->
+                <article class="destination-card card-elevation rounded-xl overflow-hidden" data-season="summer"
+                    data-activity="culture relaxation" data-region="central-switzerland">
+                    <div class="relative aspect-card overflow-hidden">
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_19eaefc51-1766127079577.png"
+                            alt="Historic Chapel Bridge spanning Reuss River in Lucerne with medieval water tower and colorful buildings"
+                            class="destination-card-image w-full h-full object-cover" loading="lazy"
+                            onerror="this.src='https://images.pixabay.com/photo/2017/08/22/11/55/chapel-bridge-2668327_1280.jpg'; this.onerror=null;">
+                        <div class="absolute top-4 right-4">
+                            <button
+                                class="favorite-btn w-10 h-10 bg-white/90 hover:bg-white rounded-full flex items-center justify-center transition-all duration-300"
+                                data-destination="Lucerne" aria-label="Add Lucerne to favorites">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div
+                            class="absolute inset-0 gradient-overlay-dark opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <div class="text-white">
+                                <p class="text-sm mb-2">Historic Chapel Bridge</p>
+                                <p class="text-sm">Medieval charm meets lakeside elegance</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span
+                                class="px-3 py-1 bg-accent/10 text-accent text-xs font-medium rounded-full">Culture</span>
+                            <span
+                                class="px-3 py-1 bg-secondary/10 text-secondary text-xs font-medium rounded-full">Summer</span>
+                        </div>
+                        <h3 class="destination-name text-primary mb-3">Lucerne</h3>
+                        <p class="text-text-secondary mb-4">Discover medieval charm along Lake Lucerne, featuring the
+                            iconic Chapel Bridge, Lion Monument, and stunning mountain panoramas.</p>
+                        <div class="flex items-center gap-4 mb-4 text-sm text-text-secondary">
+                            <div class="flex items-center gap-1">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                Central Switzerland
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                    </polygon>
+                                </svg>
+                                4.7/5
+                            </div>
+                        </div>
+                        <a href="javascript:void(0)"
+                            class="inline-flex items-center gap-2 text-primary font-cta font-medium hover:gap-3 transition-all duration-300">
+                            Explore Details
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Destination Card 5 - Interlaken -->
+                <article class="destination-card card-elevation rounded-xl overflow-hidden" data-season="summer"
+                    data-activity="adventure relaxation" data-region="bernese-oberland">
+                    <div class="relative aspect-card overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1667298026326-bf93f52460e0"
+                            alt="Aerial view of Interlaken town nestled between turquoise Lake Thun and Lake Brienz with mountain backdrop"
+                            class="destination-card-image w-full h-full object-cover" loading="lazy"
+                            onerror="this.src='https://images.pexels.com/photos/1574843/pexels-photo-1574843.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+                        <div class="absolute top-4 right-4">
+                            <button
+                                class="favorite-btn w-10 h-10 bg-white/90 hover:bg-white rounded-full flex items-center justify-center transition-all duration-300"
+                                data-destination="Interlaken" aria-label="Add Interlaken to favorites">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div
+                            class="absolute inset-0 gradient-overlay-dark opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <div class="text-white">
+                                <p class="text-sm mb-2">Adventure Capital</p>
+                                <p class="text-sm">Between two pristine alpine lakes</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span
+                                class="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">Adventure</span>
+                            <span
+                                class="px-3 py-1 bg-secondary/10 text-secondary text-xs font-medium rounded-full">Summer</span>
+                        </div>
+                        <h3 class="destination-name text-primary mb-3">Interlaken</h3>
+                        <p class="text-text-secondary mb-4">Switzerland's adventure capital nestled between Lake Thun
+                            and Lake Brienz, offering paragliding, skydiving, and stunning mountain views.</p>
+                        <div class="flex items-center gap-4 mb-4 text-sm text-text-secondary">
+                            <div class="flex items-center gap-1">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                Bernese Oberland
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                    </polygon>
+                                </svg>
+                                4.8/5
+                            </div>
+                        </div>
+                        <a href="javascript:void(0)"
+                            class="inline-flex items-center gap-2 text-primary font-cta font-medium hover:gap-3 transition-all duration-300">
+                            Explore Details
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Destination Card 6 - St. Moritz -->
+                <article class="destination-card card-elevation rounded-xl overflow-hidden" data-season="winter"
+                    data-activity="adventure relaxation" data-region="graubunden">
+                    <div class="relative aspect-card overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1591127754343-eb53b2c823fc"
+                            alt="Luxury ski resort St. Moritz with pristine snow slopes and elegant alpine architecture under blue sky"
+                            class="destination-card-image w-full h-full object-cover" loading="lazy"
+                            onerror="this.src='https://images.pexels.com/photos/848618/pexels-photo-848618.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+                        <div class="absolute top-4 right-4">
+                            <button
+                                class="favorite-btn w-10 h-10 bg-white/90 hover:bg-white rounded-full flex items-center justify-center transition-all duration-300"
+                                data-destination="St. Moritz" aria-label="Add St. Moritz to favorites">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div
+                            class="absolute inset-0 gradient-overlay-dark opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <div class="text-white">
+                                <p class="text-sm mb-2">Luxury Alpine Resort</p>
+                                <p class="text-sm">Champagne climate and world-class skiing</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span
+                                class="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">Luxury</span>
+                            <span
+                                class="px-3 py-1 bg-secondary/10 text-secondary text-xs font-medium rounded-full">Winter</span>
+                        </div>
+                        <h3 class="destination-name text-primary mb-3">St. Moritz</h3>
+                        <p class="text-text-secondary mb-4">Experience legendary luxury in the birthplace of alpine
+                            winter tourism, featuring world-class skiing and the famous "champagne climate."</p>
+                        <div class="flex items-center gap-4 mb-4 text-sm text-text-secondary">
+                            <div class="flex items-center gap-1">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                Graubünden
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                    </polygon>
+                                </svg>
+                                4.9/5
+                            </div>
+                        </div>
+                        <a href="javascript:void(0)"
+                            class="inline-flex items-center gap-2 text-primary font-cta font-medium hover:gap-3 transition-all duration-300">
+                            Explore Details
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Destination Card 7 - Bern -->
+                <article class="destination-card card-elevation rounded-xl overflow-hidden" data-season="summer"
+                    data-activity="culture" data-region="bern">
+                    <div class="relative aspect-card overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1507596939517-9d41e880d993"
+                            alt="Medieval old town of Bern with historic arcades and Zytglogge clock tower under golden afternoon light"
+                            class="destination-card-image w-full h-full object-cover" loading="lazy"
+                            onerror="this.src='https://images.pixabay.com/photo/2018/08/12/15/29/bern-3601194_1280.jpg'; this.onerror=null;">
+                        <div class="absolute top-4 right-4">
+                            <button
+                                class="favorite-btn w-10 h-10 bg-white/90 hover:bg-white rounded-full flex items-center justify-center transition-all duration-300"
+                                data-destination="Bern" aria-label="Add Bern to favorites">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div
+                            class="absolute inset-0 gradient-overlay-dark opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <div class="text-white">
+                                <p class="text-sm mb-2">UNESCO World Heritage</p>
+                                <p class="text-sm">Medieval old town with 6km of arcades</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span
+                                class="px-3 py-1 bg-accent/10 text-accent text-xs font-medium rounded-full">Culture</span>
+                            <span
+                                class="px-3 py-1 bg-secondary/10 text-secondary text-xs font-medium rounded-full">Year-Round</span>
+                        </div>
+                        <h3 class="destination-name text-primary mb-3">Bern</h3>
+                        <p class="text-text-secondary mb-4">Explore Switzerland's charming capital with its
+                            UNESCO-listed medieval old town, featuring 6km of covered arcades and the famous Zytglogge
+                            clock tower.</p>
+                        <div class="flex items-center gap-4 mb-4 text-sm text-text-secondary">
+                            <div class="flex items-center gap-1">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                Bern
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                    </polygon>
+                                </svg>
+                                4.6/5
+                            </div>
+                        </div>
+                        <a href="javascript:void(0)"
+                            class="inline-flex items-center gap-2 text-primary font-cta font-medium hover:gap-3 transition-all duration-300">
+                            Explore Details
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Destination Card 8 - Grindelwald -->
+                <article class="destination-card card-elevation rounded-xl overflow-hidden" data-season="winter summer"
+                    data-activity="adventure" data-region="bernese-oberland">
+                    <div class="relative aspect-card overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1615758369849-110c9ae725ba"
+                            alt="Scenic mountain village of Grindelwald with traditional chalets and dramatic Eiger North Face backdrop"
+                            class="destination-card-image w-full h-full object-cover" loading="lazy"
+                            onerror="this.src='https://images.pexels.com/photos/1054218/pexels-photo-1054218.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+                        <div class="absolute top-4 right-4">
+                            <button
+                                class="favorite-btn w-10 h-10 bg-white/90 hover:bg-white rounded-full flex items-center justify-center transition-all duration-300"
+                                data-destination="Grindelwald" aria-label="Add Grindelwald to favorites">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div
+                            class="absolute inset-0 gradient-overlay-dark opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <div class="text-white">
+                                <p class="text-sm mb-2">Eiger North Face Views</p>
+                                <p class="text-sm">Gateway to Jungfrau adventures</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span
+                                class="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">Adventure</span>
+                            <span
+                                class="px-3 py-1 bg-secondary/10 text-secondary text-xs font-medium rounded-full">Year-Round</span>
+                        </div>
+                        <h3 class="destination-name text-primary mb-3">Grindelwald</h3>
+                        <p class="text-text-secondary mb-4">Experience dramatic mountain scenery beneath the legendary
+                            Eiger North Face, with access to world-class hiking and skiing adventures.</p>
+                        <div class="flex items-center gap-4 mb-4 text-sm text-text-secondary">
+                            <div class="flex items-center gap-1">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                Bernese Oberland
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                    </polygon>
+                                </svg>
+                                4.8/5
+                            </div>
+                        </div>
+                        <a href="javascript:void(0)"
+                            class="inline-flex items-center gap-2 text-primary font-cta font-medium hover:gap-3 transition-all duration-300">
+                            Explore Details
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Destination Card 9 - Lugano -->
+                <article class="destination-card card-elevation rounded-xl overflow-hidden" data-season="summer"
+                    data-activity="relaxation culture" data-region="ticino">
+                    <div class="relative aspect-card overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1578847109228-82ef6e5732c6"
+                            alt="Mediterranean-style Lugano lakefront with palm trees, colorful buildings, and mountain backdrop"
+                            class="destination-card-image w-full h-full object-cover" loading="lazy"
+                            onerror="this.src='https://images.pixabay.com/photo/2016/10/13/11/36/lugano-1737328_1280.jpg'; this.onerror=null;">
+                        <div class="absolute top-4 right-4">
+                            <button
+                                class="favorite-btn w-10 h-10 bg-white/90 hover:bg-white rounded-full flex items-center justify-center transition-all duration-300"
+                                data-destination="Lugano" aria-label="Add Lugano to favorites">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div
+                            class="absolute inset-0 gradient-overlay-dark opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <div class="text-white">
+                                <p class="text-sm mb-2">Mediterranean Switzerland</p>
+                                <p class="text-sm">Italian culture meets Swiss precision</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span
+                                class="px-3 py-1 bg-accent/10 text-accent text-xs font-medium rounded-full">Relaxation</span>
+                            <span
+                                class="px-3 py-1 bg-secondary/10 text-secondary text-xs font-medium rounded-full">Summer</span>
+                        </div>
+                        <h3 class="destination-name text-primary mb-3">Lugano</h3>
+                        <p class="text-text-secondary mb-4">Discover Switzerland's Mediterranean soul in Ticino, where
+                            Italian culture, palm-lined promenades, and alpine beauty create a unique atmosphere.</p>
+                        <div class="flex items-center gap-4 mb-4 text-sm text-text-secondary">
+                            <div class="flex items-center gap-1">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                Ticino
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                    </polygon>
+                                </svg>
+                                4.7/5
+                            </div>
+                        </div>
+                        <a href="javascript:void(0)"
+                            class="inline-flex items-center gap-2 text-primary font-cta font-medium hover:gap-3 transition-all duration-300">
+                            Explore Details
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Destination Card 10 - Zurich -->
+                <article class="destination-card card-elevation rounded-xl overflow-hidden" data-season="summer"
+                    data-activity="culture" data-region="zurich">
+                    <div class="relative aspect-card overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1685950527843-2725241f4f39"
+                            alt="Modern Zurich skyline with historic church spires along Limmat River at sunset"
+                            class="destination-card-image w-full h-full object-cover" loading="lazy"
+                            onerror="this.src='https://images.pixabay.com/photo/2017/01/18/21/34/zurich-1990507_1280.jpg'; this.onerror=null;">
+                        <div class="absolute top-4 right-4">
+                            <button
+                                class="favorite-btn w-10 h-10 bg-white/90 hover:bg-white rounded-full flex items-center justify-center transition-all duration-300"
+                                data-destination="Zurich" aria-label="Add Zurich to favorites">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div
+                            class="absolute inset-0 gradient-overlay-dark opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <div class="text-white">
+                                <p class="text-sm mb-2">Global Financial Hub</p>
+                                <p class="text-sm">Where tradition meets innovation</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span
+                                class="px-3 py-1 bg-accent/10 text-accent text-xs font-medium rounded-full">Culture</span>
+                            <span
+                                class="px-3 py-1 bg-secondary/10 text-secondary text-xs font-medium rounded-full">Year-Round</span>
+                        </div>
+                        <h3 class="destination-name text-primary mb-3">Zurich</h3>
+                        <p class="text-text-secondary mb-4">Experience Switzerland's largest city, blending world-class
+                            museums, vibrant nightlife, and stunning lakeside setting with efficient Swiss precision.
+                        </p>
+                        <div class="flex items-center gap-4 mb-4 text-sm text-text-secondary">
+                            <div class="flex items-center gap-1">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                Zurich
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                    </polygon>
+                                </svg>
+                                4.6/5
+                            </div>
+                        </div>
+                        <a href="javascript:void(0)"
+                            class="inline-flex items-center gap-2 text-primary font-cta font-medium hover:gap-3 transition-all duration-300">
+                            Explore Details
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Destination Card 11 - Appenzell -->
+                <article class="destination-card card-elevation rounded-xl overflow-hidden" data-season="summer"
+                    data-activity="culture relaxation" data-region="eastern-switzerland">
+                    <div class="relative aspect-card overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1597348217732-5a6026e434f5"
+                            alt="Traditional painted facades of Appenzell village with colorful folk art and mountain backdrop"
+                            class="destination-card-image w-full h-full object-cover" loading="lazy"
+                            onerror="this.src='https://images.pixabay.com/photo/2018/09/24/08/52/appenzell-3699348_1280.jpg'; this.onerror=null;">
+                        <div class="absolute top-4 right-4">
+                            <button
+                                class="favorite-btn w-10 h-10 bg-white/90 hover:bg-white rounded-full flex items-center justify-center transition-all duration-300"
+                                data-destination="Appenzell" aria-label="Add Appenzell to favorites">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div
+                            class="absolute inset-0 gradient-overlay-dark opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <div class="text-white">
+                                <p class="text-sm mb-2">Traditional Swiss Culture</p>
+                                <p class="text-sm">Authentic folk art and customs</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span
+                                class="px-3 py-1 bg-accent/10 text-accent text-xs font-medium rounded-full">Culture</span>
+                            <span
+                                class="px-3 py-1 bg-secondary/10 text-secondary text-xs font-medium rounded-full">Summer</span>
+                        </div>
+                        <h3 class="destination-name text-primary mb-3">Appenzell</h3>
+                        <p class="text-text-secondary mb-4">Immerse yourself in authentic Swiss traditions in this
+                            charming village known for colorful painted facades, folk art, and preserved customs.</p>
+                        <div class="flex items-center gap-4 mb-4 text-sm text-text-secondary">
+                            <div class="flex items-center gap-1">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                Eastern Switzerland
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                    </polygon>
+                                </svg>
+                                4.7/5
+                            </div>
+                        </div>
+                        <a href="javascript:void(0)"
+                            class="inline-flex items-center gap-2 text-primary font-cta font-medium hover:gap-3 transition-all duration-300">
+                            Explore Details
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Destination Card 12 - Lauterbrunnen -->
+                <article class="destination-card card-elevation rounded-xl overflow-hidden" data-season="summer"
+                    data-activity="adventure relaxation" data-region="bernese-oberland">
+                    <div class="relative aspect-card overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1652027252246-9336bb474a94"
+                            alt="Dramatic Lauterbrunnen valley with 72 waterfalls cascading down vertical cliff walls and green meadows"
+                            class="destination-card-image w-full h-full object-cover" loading="lazy"
+                            onerror="this.src='https://images.pexels.com/photos/1574843/pexels-photo-1574843.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+                        <div class="absolute top-4 right-4">
+                            <button
+                                class="favorite-btn w-10 h-10 bg-white/90 hover:bg-white rounded-full flex items-center justify-center transition-all duration-300"
+                                data-destination="Lauterbrunnen" aria-label="Add Lauterbrunnen to favorites">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div
+                            class="absolute inset-0 gradient-overlay-dark opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <div class="text-white">
+                                <p class="text-sm mb-2">Valley of 72 Waterfalls</p>
+                                <p class="text-sm">Nature's dramatic masterpiece</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span
+                                class="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">Nature</span>
+                            <span
+                                class="px-3 py-1 bg-secondary/10 text-secondary text-xs font-medium rounded-full">Summer</span>
+                        </div>
+                        <h3 class="destination-name text-primary mb-3">Lauterbrunnen</h3>
+                        <p class="text-text-secondary mb-4">Marvel at one of the most spectacular valleys in the Alps,
+                            featuring 72 waterfalls cascading down dramatic vertical cliffs.</p>
+                        <div class="flex items-center gap-4 mb-4 text-sm text-text-secondary">
+                            <div class="flex items-center gap-1">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                Bernese Oberland
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                    </polygon>
+                                </svg>
+                                4.9/5
+                            </div>
+                        </div>
+                        <a href="javascript:void(0)"
+                            class="inline-flex items-center gap-2 text-primary font-cta font-medium hover:gap-3 transition-all duration-300">
+                            Explore Details
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- No Results Message -->
+            <div id="noResults" class="hidden text-center py-16">
+                <svg class="w-24 h-24 mx-auto mb-6 text-text-tertiary" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <h3 class="font-headline text-2xl text-primary mb-4">No Destinations Found</h3>
+                <p class="text-text-secondary mb-6">Try adjusting your filters or search terms to discover more Swiss
+                    destinations.</p>
+                <button id="clearAllFilters" class="btn-primary">Clear All Filters</button>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-12">
+                <button id="loadMoreBtn" class="btn-secondary">
+                    Load More Destinations
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Traveler Stories Section -->
+    <section class="section-padding bg-surface">
+        <div class="container mx-auto container-padding">
+            <div class="text-center mb-16 fade-in">
+                <p class="font-accent text-accent text-lg mb-4">Real Experiences</p>
+                <h2 class="font-headline text-primary mb-6">Stories from Fellow Travelers</h2>
+                <p class="text-text-secondary text-lg max-w-2xl mx-auto">
+                    Discover authentic experiences shared by travelers who've explored Switzerland's hidden gems and
+                    iconic destinations.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 card-grid">
+                <!-- Story Card 1 -->
+                <article class="card-elevation rounded-xl p-6">
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="https://images.unsplash.com/photo-1565218331186-f0acf1ad872c"
+                            alt="Portrait of Sarah Chen, travel blogger from San Francisco"
+                            class="w-16 h-16 rounded-full object-cover" loading="lazy"
+                            onerror="this.src='https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=200'; this.onerror=null;">
+                        <div>
+                            <h4 class="font-headline text-lg text-primary">Sarah Chen</h4>
+                            <p class="text-sm text-text-secondary">San Francisco, USA</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-1 mb-4">
+                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                    </div>
+                    <p class="text-text-secondary mb-4 leading-relaxed">
+                        "The Jungfrau experience exceeded all expectations. Standing at the Top of Europe with the
+                        Aletsch Glacier stretching before me was absolutely breathtaking. The journey itself on the
+                        cogwheel railway was unforgettable."
+                    </p>
+                    <p class="text-sm text-text-tertiary">Visited: Jungfrau Region • December 2024</p>
+                </article>
+
+                <!-- Story Card 2 -->
+                <article class="card-elevation rounded-xl p-6">
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_176a5997b-1763293844277.png"
+                            alt="Portrait of Marcus Weber, photographer from Berlin"
+                            class="w-16 h-16 rounded-full object-cover" loading="lazy"
+                            onerror="this.src='https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=200'; this.onerror=null;">
+                        <div>
+                            <h4 class="font-headline text-lg text-primary">Marcus Weber</h4>
+                            <p class="text-sm text-text-secondary">Berlin, Germany</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-1 mb-4">
+                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                        <svg class="w-5 h-5 text-border" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                    </div>
+                    <p class="text-text-secondary mb-4 leading-relaxed">
+                        "Zermatt is a photographer's paradise. The Matterhorn at sunrise is something I'll never forget.
+                        The car-free village atmosphere adds to the magic, and the Gornergrat railway offers incredible
+                        panoramic views."
+                    </p>
+                    <p class="text-sm text-text-tertiary">Visited: Zermatt • November 2024</p>
+                </article>
+
+                <!-- Story Card 3 -->
+                <article class="card-elevation rounded-xl p-6">
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1c9852460-1763301043425.png"
+                            alt="Portrait of Emma Thompson, travel writer from London"
+                            class="w-16 h-16 rounded-full object-cover" loading="lazy"
+                            onerror="this.src='https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=200'; this.onerror=null;">
+                        <div>
+                            <h4 class="font-headline text-lg text-primary">Emma Thompson</h4>
+                            <p class="text-sm text-text-secondary">London, UK</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-1 mb-4">
+                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                    </div>
+                    <p class="text-text-secondary mb-4 leading-relaxed">
+                        "Lake Geneva's Lavaux vineyards are stunning. The terraced vineyards cascading down to the lake
+                        with the Alps in the background create the most romantic setting. The wine tasting experiences
+                        were exceptional too!"
+                    </p>
+                    <p class="text-sm text-text-tertiary">Visited: Lake Geneva • September 2024</p>
+                </article>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="community.html" class="btn-accent">
+                    Read More Stories
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-padding bg-primary text-white relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10">
+            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1" />
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#grid)" />
+            </svg>
+        </div>
+
+        <div class="container mx-auto container-padding relative z-10">
+            <div class="max-w-3xl mx-auto text-center fade-in">
+                <h2 class="font-headline mb-6">Ready to Plan Your Swiss Adventure?</h2>
+                <p class="text-white/90 text-lg mb-8">
+                    Let us help you create a personalized itinerary that captures the essence of Switzerland and matches
+                    your travel dreams perfectly.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="journey_planner.html" class="btn-accent">Start Planning</a>
+                    <a href="contact.html"
+                        class="bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-lg font-cta font-semibold transition-all duration-300">
+                        Get Expert Advice
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary-900 text-white section-padding">
+        <div class="container mx-auto container-padding">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Brand Column -->
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <svg width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 38L16 18L24 28L32 14L44 38H4Z" fill="#7BA05B" />
+                            <path d="M12 38L20 24L28 32L36 22L44 38H12Z" fill="#D4AF37" opacity="0.6" />
+                            <path d="M16 18L18 22L14 22L16 18Z" fill="white" />
+                            <path d="M32 14L35 20L29 20L32 14Z" fill="white" />
+                            <rect x="2" y="36" width="44" height="3" fill="#1a3a28" />
+                            <rect x="8" y="28" width="20" height="8" rx="2" fill="#D4AF37" />
+                            <circle cx="12" cy="36" r="2" fill="#1a3a28" />
+                            <circle cx="24" cy="36" r="2" fill="#1a3a28" />
+
+                            <circle cx="24" cy="24" r="4" fill="#D4AF37" />
+                        </svg>
+                        <span class="font-headline text-xl font-semibold">Swiss Journey</span>
+                    </div>
+                    <p class="text-white/70 mb-6">
+                        Your personal gateway to authentic Swiss experiences. Discover Switzerland's soul, not just its
+                        sights.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="javascript:void(0)"
+                            class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors duration-300"
+                            aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)"
+                            class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors duration-300"
+                            aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)"
+                            class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors duration-300"
+                            aria-label="Twitter">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Explore Column -->
+                <div>
+                    <h4 class="font-headline text-lg mb-6">Explore</h4>
+                    <ul class="space-y-3">
+                        <li><a href="destination.html"
+                                class="text-white/70 hover:text-white transition-colors duration-300">Destinations</a>
+                        </li>
+                        <li><a href="journey_planner.html"
+                                class="text-white/70 hover:text-white transition-colors duration-300">Journey
+                                Planner</a></li>
+                        <li><a href="about.html"
+                                class="text-white/70 hover:text-white transition-colors duration-300">About
+                                Switzerland</a></li>
+                        <li><a href="community.html"
+                                class="text-white/70 hover:text-white transition-colors duration-300">Community
+                                Stories</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources Column -->
+                <div>
+                    <h4 class="font-headline text-lg mb-6">Resources</h4>
+                    <ul class="space-y-3">
+                        <li><a href="javascript:void(0)"
+                                class="text-white/70 hover:text-white transition-colors duration-300">Travel Guides</a>
+                        </li>
+                        <li><a href="javascript:void(0)"
+                                class="text-white/70 hover:text-white transition-colors duration-300">Cultural
+                                Etiquette</a></li>
+                        <li><a href="javascript:void(0)"
+                                class="text-white/70 hover:text-white transition-colors duration-300">Transportation
+                                Tips</a></li>
+                        <li><a href="javascript:void(0)"
+                                class="text-white/70 hover:text-white transition-colors duration-300">Language
+                                Basics</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Column -->
+                <div>
+                    <h4 class="font-headline text-lg mb-6">Get in Touch</h4>
+                    <ul class="space-y-3">
+                        <li><a href="contact.html"
+                                class="text-white/70 hover:text-white transition-colors duration-300">Contact Us</a>
+                        </li>
+                        <li><a href="javascript:void(0)"
+                                class="text-white/70 hover:text-white transition-colors duration-300">FAQ</a></li>
+                        <li><a href="javascript:void(0)"
+                                class="text-white/70 hover:text-white transition-colors duration-300">Travel
+                                Consultation</a></li>
+                        <li><a href="javascript:void(0)"
+                                class="text-white/70 hover:text-white transition-colors duration-300">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-white/70 text-sm">© 2025 Swiss Journey. All Rights Reserved.</p>
+                    <div class="flex gap-6">
+                        <a href="javascript:void(0)"
+                            class="text-white/70 hover:text-white text-sm transition-colors duration-300">Privacy
+                            Policy</a>
+                        <a href="javascript:void(0)"
+                            class="text-white/70 hover:text-white text-sm transition-colors duration-300">Terms of
+                            Service</a>
+                        <a href="javascript:void(0)"
+                            class="text-white/70 hover:text-white text-sm transition-colors duration-300">Cookie
+                            Settings</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Sticky Header
+        const header = document.getElementById('mainHeader');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > 100) {
+                header.classList.add('shadow-lg');
+            } else {
+                header.classList.remove('shadow-lg');
+            }
+
+            lastScroll = currentScroll;
+        });
+
+        // Search Functionality
+        const searchInput = document.getElementById('searchInput');
+        const clearSearch = document.getElementById('clearSearch');
+        const destinationsGrid = document.getElementById('destinationsGrid');
+        const noResults = document.getElementById('noResults');
+        const resultsCount = document.getElementById('resultsCount');
+
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+
+            if (searchTerm.length > 0) {
+                clearSearch.classList.remove('hidden');
+            } else {
+                clearSearch.classList.add('hidden');
+            }
+
+            filterDestinations();
+        });
+
+        clearSearch.addEventListener('click', () => {
+            searchInput.value = '';
+            clearSearch.classList.add('hidden');
+            filterDestinations();
+        });
+
+        // Filter Functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const resetFilters = document.getElementById('resetFilters');
+        const activeFilters = document.getElementById('activeFilters');
+        let currentFilters = new Set(['all']);
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const filter = btn.dataset.filter;
+
+                if (filter === 'all') {
+                    currentFilters.clear();
+                    currentFilters.add('all');
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                } else {
+                    currentFilters.delete('all');
+
+                    if (currentFilters.has(filter)) {
+                        currentFilters.delete(filter);
+                        btn.classList.remove('active');
+                    } else {
+                        currentFilters.add(filter);
+                        btn.classList.add('active');
+                    }
+
+                    if (currentFilters.size === 0) {
+                        currentFilters.add('all');
+                        filterBtns[0].classList.add('active');
+                    } else {
+                        filterBtns[0].classList.remove('active');
+                    }
+                }
+
+                updateActiveFilters();
+                filterDestinations();
+            });
+        });
+
+        function updateActiveFilters() {
+            if (currentFilters.has('all') || currentFilters.size === 0) {
+                resetFilters.classList.add('hidden');
+                activeFilters.classList.add('hidden');
+            } else {
+                resetFilters.classList.remove('hidden');
+                activeFilters.classList.remove('hidden');
+
+                activeFilters.innerHTML = '';
+                currentFilters.forEach(filter => {
+                    const tag = document.createElement('span');
+                    tag.className = 'px-3 py-1 bg-primary/10 text-primary text-sm rounded-full flex items-center gap-2';
+                    tag.innerHTML = `
+                        ${filter.charAt(0).toUpperCase() + filter.slice(1)}
+                        <button class="hover:text-primary-600" onclick="removeFilter('${filter}')">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                            </svg>
+                        </button>
+                    `;
+                    activeFilters.appendChild(tag);
+                });
+            }
+        }
+
+        window.removeFilter = function (filter) {
+            currentFilters.delete(filter);
+            const btn = document.querySelector(`[data-filter="${filter}"]`);
+            if (btn) btn.classList.remove('active');
+
+            if (currentFilters.size === 0) {
+                currentFilters.add('all');
+                filterBtns[0].classList.add('active');
+            }
+
+            updateActiveFilters();
+            filterDestinations();
+        };
+
+        resetFilters.addEventListener('click', () => {
+            currentFilters.clear();
+            currentFilters.add('all');
+            filterBtns.forEach(btn => btn.classList.remove('active'));
+            filterBtns[0].classList.add('active');
+            updateActiveFilters();
+            filterDestinations();
+        });
+
+        document.getElementById('clearAllFilters').addEventListener('click', () => {
+            searchInput.value = '';
+            clearSearch.classList.add('hidden');
+            currentFilters.clear();
+            currentFilters.add('all');
+            filterBtns.forEach(btn => btn.classList.remove('active'));
+            filterBtns[0].classList.add('active');
+            updateActiveFilters();
+            filterDestinations();
+        });
+
+        function filterDestinations() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const cards = destinationsGrid.querySelectorAll('.destination-card');
+            let visibleCount = 0;
+
+            cards.forEach(card => {
+                const cardText = card.textContent.toLowerCase();
+                const cardSeasons = card.dataset.season ? card.dataset.season.split(' ') : [];
+                const cardActivities = card.dataset.activity ? card.dataset.activity.split(' ') : [];
+
+                const matchesSearch = searchTerm === '' || cardText.includes(searchTerm);
+                const matchesFilter = currentFilters.has('all') ||
+                    [...currentFilters].some(filter =>
+                        cardSeasons.includes(filter) || cardActivities.includes(filter)
+                    );
+
+                if (matchesSearch && matchesFilter) {
+                    card.style.display = '';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            resultsCount.textContent = visibleCount;
+
+            if (visibleCount === 0) {
+                destinationsGrid.classList.add('hidden');
+                noResults.classList.remove('hidden');
+            } else {
+                destinationsGrid.classList.remove('hidden');
+                noResults.classList.add('hidden');
+            }
+        }
+
+        // Sort Functionality
+        const sortSelect = document.getElementById('sortSelect');
+
+        sortSelect.addEventListener('change', (e) => {
+            const sortBy = e.target.value;
+            const cards = Array.from(destinationsGrid.querySelectorAll('.destination-card'));
+
+            cards.sort((a, b) => {
+                if (sortBy === 'name') {
+                    const nameA = a.querySelector('.destination-name').textContent;
+                    const nameB = b.querySelector('.destination-name').textContent;
+                    return nameA.localeCompare(nameB);
+                } else if (sortBy === 'popularity') {
+                    const ratingA = parseFloat(a.querySelector('.text-sm').textContent);
+                    const ratingB = parseFloat(b.querySelector('.text-sm').textContent);
+                    return ratingB - ratingA;
+                }
+                return 0;
+            });
+
+            cards.forEach(card => destinationsGrid.appendChild(card));
+        });
+
+        // Favorite Functionality
+        const favoriteBtns = document.querySelectorAll('.favorite-btn');
+        let favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
+
+        favoriteBtns.forEach(btn => {
+            const destination = btn.dataset.destination;
+
+            if (favorites.includes(destination)) {
+                btn.querySelector('svg').setAttribute('fill', 'currentColor');
+                btn.classList.add('text-error');
+            }
+
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const svg = btn.querySelector('svg');
+
+                if (favorites.includes(destination)) {
+                    favorites = favorites.filter(fav => fav !== destination);
+                    svg.setAttribute('fill', 'none');
+                    btn.classList.remove('text-error');
+                } else {
+                    favorites.push(destination);
+                    svg.setAttribute('fill', 'currentColor');
+                    btn.classList.add('text-error');
+                }
+
+                localStorage.setItem('favorites', JSON.stringify(favorites));
+            });
+        });
+
+        // Load More Functionality
+        const loadMoreBtn = document.getElementById('loadMoreBtn');
+        let isLoadingMore = false;
+
+        loadMoreBtn.addEventListener('click', () => {
+            if (isLoadingMore) return;
+
+            isLoadingMore = true;
+            loadMoreBtn.textContent = 'Loading...';
+            loadMoreBtn.disabled = true;
+
+            setTimeout(() => {
+                loadMoreBtn.textContent = 'Load More Destinations';
+                loadMoreBtn.disabled = false;
+                isLoadingMore = false;
+            }, 1500);
+        });
+
+        // Fade-in Animation on Scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Initialize filter buttons styling
+        const style = document.createElement('style');
+        style.textContent = `
+            .filter-btn {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+                padding: 0.5rem 1rem;
+                border-radius: 0.5rem;
+                font-size: 0.875rem;
+                font-weight: 500;
+                background-color: var(--color-surface);
+                color: var(--color-text-secondary);
+                border: 1px solid var(--color-border);
+                transition: all 300ms ease-out;
+                cursor: pointer;
+            }
+            
+            .filter-btn:hover {
+                background-color: var(--color-surface-hover);
+                color: var(--color-primary);
+            }
+            
+            .filter-btn.active {
+                background-color: var(--color-primary);
+                color: white;
+                border-color: var(--color-primary);
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+    <script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+
+</html>

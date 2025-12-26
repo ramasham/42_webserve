@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="en" class="smooth-scroll">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Join the Swiss Journey community - Share your travel stories, connect with fellow adventurers, and discover authentic Swiss experiences through traveler photos and local recommendations.">
+    <title>Community Stories & Travel Inspiration - Swiss Journey</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <script type="module" async
+        src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fswissjour5887back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.12"></script>
+    <script type="module" defer src="https://static.rocket.new/rocket-shot.js?v=0.0.2"></script>
+</head>
+
+<body class="bg-background">
+    <!-- Navigation Header -->
+    <header
+        class="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border transition-all duration-300"
+        id="mainHeader">
+        <nav class="container mx-auto container-padding">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="homepage.html" class="flex items-center gap-3 group">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="transition-transform duration-300 group-hover:scale-105">
+                        <!-- Mountain background -->
+                        <path d="M4 38L16 18L24 28L32 14L44 38H4Z" fill="#2C5F41" />
+                        <path d="M12 38L20 24L28 32L36 22L44 38H12Z" fill="#7BA05B" opacity="0.8" />
+                        <!-- Snow caps -->
+                        <path d="M16 18L18 22L14 22L16 18Z" fill="white" />
+                        <path d="M32 14L35 20L29 20L32 14Z" fill="white" />
+                        <!-- Train track -->
+                        <rect x="2" y="36" width="44" height="3" fill="#1a3a28" />
+                        <line x1="6" y1="36" x2="6" y2="39" stroke="#D4AF37" stroke-width="1.5" />
+                        <line x1="12" y1="36" x2="12" y2="39" stroke="#D4AF37" stroke-width="1.5" />
+                        <line x1="18" y1="36" x2="18" y2="39" stroke="#D4AF37" stroke-width="1.5" />
+                        <line x1="24" y1="36" x2="24" y2="39" stroke="#D4AF37" stroke-width="1.5" />
+                        <line x1="30" y1="36" x2="30" y2="39" stroke="#D4AF37" stroke-width="1.5" />
+                        <line x1="36" y1="36" x2="36" y2="39" stroke="#D4AF37" stroke-width="1.5" />
+                        <line x1="42" y1="36" x2="42" y2="39" stroke="#D4AF37" stroke-width="1.5" />
+                        <!-- Train -->
+                        <rect x="8" y="28" width="20" height="8" rx="2" fill="#D4AF37" />
+                        <rect x="10" y="30" width="5" height="4" rx="1" fill="#2C5F41" />
+                        <rect x="17" y="30" width="5" height="4" rx="1" fill="#2C5F41" />
+                        <circle cx="12" cy="36" r="2" fill="#1a3a28" />
+                        <circle cx="24" cy="36" r="2" fill="#1a3a28" />
+                        <!-- Sun -->
+                        <circle cx="40" cy="10" r="5" fill="#D4AF37" />
+                    </svg>
+                    <span class="font-headline text-2xl font-semibold text-primary">Swiss Journey</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="homepage.html"
+                        class="font-body text-base text-text-secondary hover:text-primary transition-colors duration-300">Home</a>
+                    <a href="destination.html"
+                        class="font-body text-base text-text-secondary hover:text-primary transition-colors duration-300">Destinations</a>
+                    <a href="about.html"
+                        class="font-body text-base text-text-secondary hover:text-primary transition-colors duration-300">About</a>
+                    <a href="journey_planner.html"
+                        class="font-body text-base text-text-secondary hover:text-primary transition-colors duration-300">Journey
+                        Planner</a>
+                    <a href="community.html"
+                        class="font-body text-base text-primary font-medium border-b-2 border-primary pb-1 transition-colors duration-300">Community</a>
+                    <a href="contact.html" class="btn-primary">Get Started</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="lg:hidden p-2 text-primary" aria-label="Toggle mobile menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobileMenu" class="hidden lg:hidden pb-6">
+                <div class="flex flex-col gap-4">
+                    <a href="homepage.html"
+                        class="font-body text-base text-text-secondary hover:text-primary py-2 pl-4 transition-colors duration-300">Home</a>
+                    <a href="destination.html"
+                        class="font-body text-base text-text-secondary hover:text-primary py-2 pl-4 transition-colors duration-300">Destinations</a>
+                    <a href="about.html"
+                        class="font-body text-base text-text-secondary hover:text-primary py-2 pl-4 transition-colors duration-300">About</a>
+                    <a href="journey_planner.html"
+                        class="font-body text-base text-text-secondary hover:text-primary py-2 pl-4 transition-colors duration-300">Journey
+                        Planner</a>
+                    <a href="community.html"
+                        class="font-body text-base text-primary font-medium py-2 border-l-4 border-primary pl-4">Community</a>
+                    <a href="contact.html" class="btn-primary w-full text-center mt-2">Get Started</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section - Clean Modern Style -->
+    <section class="relative min-h-[70vh] flex items-center overflow-hidden pt-20">
+        <!-- Background Image -->
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1563902519322-1ef560bfad1e?w=3840&q=100"
+                alt="Group of diverse travelers sharing stories and laughter around a campfire in the Swiss Alps at sunset"
+                class="w-full h-full object-cover" loading="eager"
+                onerror="this.src='https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=3840&q=100'; this.onerror=null;">
+        </div>
+
+        <!-- Gradient Overlay - Left side darker -->
+        <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
+
+        <!-- Hero Content - Left aligned -->
+        <div class="relative z-10 container mx-auto container-padding">
+            <div class="max-w-2xl fade-in">
+                <p class="font-accent text-xl md:text-2xl mb-4 text-white" id="communityGreeting">Welcome Back,
+                    Traveler!</p>
+                <h1 class="font-headline text-white text-5xl md:text-7xl mb-6 leading-tight">
+                    Travel<br />
+                    <span class="text-[#7BA05B]">Community</span>
+                </h1>
+                <p class="text-white/90 text-lg md:text-xl mb-10 leading-relaxed max-w-lg">
+                    Join thousands of adventurers sharing their authentic Swiss experiences. Your journey inspires
+                    others to discover Switzerland's magic.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#share-story"
+                        class="bg-[#2C5F41] hover:bg-[#7BA05B] text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl">
+                        Share Your Story
+                    </a>
+                    <a href="#community-feed"
+                        class="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold border border-white/30 transition-all duration-300">
+                        Explore Stories
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Community Stats -->
+        <div class="absolute bottom-0 left-0 right-0 bg-black/60 backdrop-blur-md py-6">
+            <div class="container mx-auto container-padding">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                    <div>
+                        <p class="text-3xl md:text-4xl font-bold text-white" id="totalStories">2,847</p>
+                        <p class="text-white/70 text-sm">Stories Shared</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl md:text-4xl font-bold text-white" id="totalPhotos">15,392</p>
+                        <p class="text-white/70 text-sm">Photos Posted</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl md:text-4xl font-bold text-white" id="activeTravelers">8,456</p>
+                        <p class="text-white/70 text-sm">Active Members</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl md:text-4xl font-bold text-white" id="newsletterSubs">12,234</p>
+                        <p class="text-white/70 text-sm">Newsletter Subscribers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Stories Section -->
+    <section class="section-padding bg-background" id="community-feed">
+        <div class="container mx-auto container-padding">
+            <div class="text-center mb-16 fade-in">
+                <p class="font-accent text-accent text-lg mb-4">Community Highlights</p>
+                <h2 class="font-headline text-primary mb-6">Featured Travel Stories</h2>
+                <p class="text-text-secondary text-lg max-w-2xl mx-auto">
+                    Real adventures from real travelers. Discover authentic Swiss experiences through the eyes of our
+                    community.
+                </p>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="filter-tab active px-6 py-3 rounded-lg font-cta font-medium transition-all duration-300"
+                    data-filter="all">
+                    All Stories
+                </button>
+                <button class="filter-tab px-6 py-3 rounded-lg font-cta font-medium transition-all duration-300"
+                    data-filter="adventure">
+                    Adventure
+                </button>
+                <button class="filter-tab px-6 py-3 rounded-lg font-cta font-medium transition-all duration-300"
+                    data-filter="culture">
+                    Culture
+                </button>
+                <button class="filter-tab px-6 py-3 rounded-lg font-cta font-medium transition-all duration-300"
+                    data-filter="relaxation">
+                    Relaxation
+                </button>
+                <button class="filter-tab px-6 py-3 rounded-lg font-cta font-medium transition-all duration-300"
+                    data-filter="family">
+                    Family
+                </button>
+            </div>
+
+            <!-- Stories Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 card-grid" id="storiesGrid">
+                <!-- Story Card 1 -->
+                <article class="destination-card card-elevation rounded-xl overflow-hidden" data-category="adventure">
+                    <div class="relative aspect-card overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1589642378482-cc8097a7cce8"
+                            alt="Solo hiker standing triumphantly on mountain peak with arms raised, overlooking dramatic Swiss Alpine panorama at sunrise"
+                            class="destination-card-image w-full h-full object-cover" loading="lazy"
+                            onerror="this.src='https://images.pexels.com/photos/869258/pexels-photo-869258.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+                        <div
+                            class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-cta">
+                            Adventure
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-4">
+                            <img src="https://images.unsplash.com/photo-1650603697000-18d771fe3a7e"
+                                alt="Profile photo of Sarah Martinez, adventure traveler and community member"
+                                class="w-12 h-12 rounded-full object-cover" loading="lazy"
+                                onerror="this.src='https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=200'; this.onerror=null;">
+                            <div>
+                                <p class="font-cta font-semibold text-text-primary">Sarah Martinez</p>
+                                <p class="text-text-secondary text-sm">December 2025</p>
+                            </div>
+                        </div>
+                        <h3 class="destination-name text-primary mb-3">Conquering the Eiger Trail</h3>
+                        <p class="text-text-secondary mb-4">
+                            "The most challenging and rewarding hike of my life. Standing at the base of the Eiger's
+                            north face, I felt both humbled and empowered. The Swiss Alps taught me that limits are
+                            meant to be pushed."
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-4 text-text-secondary text-sm">
+                                <span class="flex items-center gap-1">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                    </svg>
+                                    342
+                                </span>
+                                <span class="flex items-center gap-1">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                    </svg>
+                                    28
+                                </span>
+                            </div>
+                            <button
+                                class="text-primary font-cta font-medium hover:text-primary-600 transition-colors duration-300">
+                                Read More
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Story Card 2 -->
+                <article class="destination-card card-elevation rounded-xl overflow-hidden" data-category="culture">
+                    <div class="relative aspect-card overflow-hidden">
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1838d595f-1766760858422.png"
+                            alt="Family participating in traditional Swiss cheese-making workshop with local artisan in rustic Alpine dairy"
+                            class="destination-card-image w-full h-full object-cover" loading="lazy"
+                            onerror="this.src='https://images.unsplash.com/photo-1452195100486-9cc805987862?q=80&w=2940&auto=format&fit=crop'; this.onerror=null;">
+                        <div
+                            class="absolute top-4 right-4 bg-secondary text-white px-3 py-1 rounded-full text-sm font-cta">
+                            Culture
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-4">
+                            <img src="https://img.rocket.new/generatedImages/rocket_gen_img_117c62db7-1763296190801.png"
+                                alt="Profile photo of James Chen, cultural explorer and community contributor"
+                                class="w-12 h-12 rounded-full object-cover" loading="lazy"
+                                onerror="this.src='https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=200'; this.onerror=null;">
+                            <div>
+                                <p class="font-cta font-semibold text-text-primary">James Chen</p>
+                                <p class="text-text-secondary text-sm">November 2025</p>
+                            </div>
+                        </div>
+                        <h3 class="destination-name text-primary mb-3">A Day with Swiss Cheesemakers</h3>
+                        <p class="text-text-secondary mb-4">
+                            "Learning the ancient art of Swiss cheese-making from a fourth-generation artisan was
+                            magical. The pride in their craft, the connection to tradition—this is the Switzerland
+                            tourists rarely see."
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-4 text-text-secondary text-sm">
+                                <span class="flex items-center gap-1">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                    </svg>
+                                    289
+                                </span>
+                                <span class="flex items-center gap-1">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                    </svg>
+                                    45
+                                </span>
+                            </div>
+                            <button
+                                class="text-primary font-cta font-medium hover:text-primary-600 transition-colors duration-300">
+                                Read More
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Story Card 3 -->
+                <article class="destination-card card-elevation rounded-xl overflow-hidden" data-category="relaxation">
+                    <div class="relative aspect-card overflow-hidden">
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1467ec090-1765062310515.png"
+                            alt="Serene spa setting with mountain view through large windows, featuring natural stone pool and wellness treatments"
+                            class="destination-card-image w-full h-full object-cover" loading="lazy"
+                            onerror="this.src='https://images.pexels.com/photos/3757952/pexels-photo-3757952.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+                        <div
+                            class="absolute top-4 right-4 bg-accent text-text-primary px-3 py-1 rounded-full text-sm font-cta">
+                            Relaxation
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-4">
+                            <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1658b37dd-1763299021458.png"
+                                alt="Profile photo of Emma Thompson, wellness traveler and community member"
+                                class="w-12 h-12 rounded-full object-cover" loading="lazy"
+                                onerror="this.src='https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=200'; this.onerror=null;">
+                            <div>
+                                <p class="font-cta font-semibold text-text-primary">Emma Thompson</p>
+                                <p class="text-text-secondary text-sm">December 2025</p>
+                            </div>
+                        </div>
+                        <h3 class="destination-name text-primary mb-3">Finding Peace in the Alps</h3>
+                        <p class="text-text-secondary mb-4">
+                            "After months of burnout, Switzerland's thermal spas and mountain silence healed my soul.
+                            Watching sunrise over Lake Geneva from my spa suite was pure meditation. I left
+                            transformed."
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-4 text-text-secondary text-sm">
+                                <span class="flex items-center gap-1">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                    </svg>
+                                    412
+                                </span>
+                                <span class="flex items-center gap-1">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                    </svg>
+                                    67
+                                </span>
+                            </div>
+                            <button
+                                class="text-primary font-cta font-medium hover:text-primary-600 transition-colors duration-300">
+                                Read More
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Story Card 4 -->
+                <article class="destination-card card-elevation rounded-xl overflow-hidden" data-category="family">
+                    <div class="relative aspect-card overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1643904697364-d7da6bb0d46b"
+                            alt="Happy family of four enjoying scenic train ride through Swiss mountains, children pointing excitedly at Alpine scenery"
+                            class="destination-card-image w-full h-full object-cover" loading="lazy"
+                            onerror="this.src='https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=2940&auto=format&fit=crop'; this.onerror=null;">
+                        <div
+                            class="absolute top-4 right-4 bg-primary-400 text-white px-3 py-1 rounded-full text-sm font-cta">
+                            Family
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-4">
+                            <img src="https://img.rocket.new/generatedImages/rocket_gen_img_17ee9aa2d-1763294865804.png"
+                                alt="Profile photo of Michael Rodriguez, family travel enthusiast and community contributor"
+                                class="w-12 h-12 rounded-full object-cover" loading="lazy"
+                                onerror="this.src='https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=200'; this.onerror=null;">
+                            <div>
+                                <p class="font-cta font-semibold text-text-primary">Michael Rodriguez</p>
+                                <p class="text-text-secondary text-sm">October 2025</p>
+                            </div>
+                        </div>
+                        <h3 class="destination-name text-primary mb-3">Creating Family Memories</h3>
+                        <p class="text-text-secondary mb-4">
+                            "Our kids still talk about the Glacier Express journey every day. Switzerland made family
+                            travel effortless—safe, beautiful, and full of wonder. We're already planning our return
+                            trip!"
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-4 text-text-secondary text-sm">
+                                <span class="flex items-center gap-1">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                    </svg>
+                                    378
+                                </span>
+                                <span class="flex items-center gap-1">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                    </svg>
+                                    52
+                                </span>
+                            </div>
+                            <button
+                                class="text-primary font-cta font-medium hover:text-primary-600 transition-colors duration-300">
+                                Read More
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Story Card 5 -->
+                <article class="destination-card card-elevation rounded-xl overflow-hidden" data-category="adventure">
+                    <div class="relative aspect-card overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1681132240908-e89eda5c47f3"
+                            alt="Paraglider soaring above stunning Swiss valley with snow-capped peaks and emerald lakes below"
+                            class="destination-card-image w-full h-full object-cover" loading="lazy"
+                            onerror="this.src='https://images.pexels.com/photos/848618/pexels-photo-848618.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+                        <div
+                            class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-cta">
+                            Adventure
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-4">
+                            <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1d8a19ef1-1763298608627.png"
+                                alt="Profile photo of David Kim, adventure sports enthusiast and community member"
+                                class="w-12 h-12 rounded-full object-cover" loading="lazy"
+                                onerror="this.src='https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=200'; this.onerror=null;">
+                            <div>
+                                <p class="font-cta font-semibold text-text-primary">David Kim</p>
+                                <p class="text-text-secondary text-sm">September 2025</p>
+                            </div>
+                        </div>
+                        <h3 class="destination-name text-primary mb-3">Flying Over Interlaken</h3>
+                        <p class="text-text-secondary mb-4">
+                            "Paragliding over the Swiss Alps was the most exhilarating experience of my life. The
+                            silence, the freedom, the breathtaking views—it's impossible to describe. You have to feel
+                            it yourself."
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-4 text-text-secondary text-sm">
+                                <span class="flex items-center gap-1">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                    </svg>
+                                    456
+                                </span>
+                                <span class="flex items-center gap-1">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                    </svg>
+                                    89
+                                </span>
+                            </div>
+                            <button
+                                class="text-primary font-cta font-medium hover:text-primary-600 transition-colors duration-300">
+                                Read More
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Story Card 6 -->
+                <article class="destination-card card-elevation rounded-xl overflow-hidden" data-category="culture">
+                    <div class="relative aspect-card overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1651870368791-4454cefb3225"
+                            alt="Traditional Swiss folk festival with locals in colorful traditional costumes performing Alpine horn music"
+                            class="destination-card-image w-full h-full object-cover" loading="lazy"
+                            onerror="this.src='https://images.unsplash.com/photo-1533105079780-92b9be482077?q=80&w=2940&auto=format&fit=crop'; this.onerror=null;">
+                        <div
+                            class="absolute top-4 right-4 bg-secondary text-white px-3 py-1 rounded-full text-sm font-cta">
+                            Culture
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-4">
+                            <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1577ea592-1765016813901.png"
+                                alt="Profile photo of Lisa Anderson, cultural immersion traveler and community contributor"
+                                class="w-12 h-12 rounded-full object-cover" loading="lazy"
+                                onerror="this.src='https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=200'; this.onerror=null;">
+                            <div>
+                                <p class="font-cta font-semibold text-text-primary">Lisa Anderson</p>
+                                <p class="text-text-secondary text-sm">August 2025</p>
+                            </div>
+                        </div>
+                        <h3 class="destination-name text-primary mb-3">Festival of Alpine Traditions</h3>
+                        <p class="text-text-secondary mb-4">
+                            "Being welcomed into a local Swiss festival felt like joining a family. The alphorn music,
+                            traditional dances, and genuine warmth of the people—this is Switzerland's true treasure."
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-4 text-text-secondary text-sm">
+                                <span class="flex items-center gap-1">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                    </svg>
+                                    325
+                                </span>
+                                <span class="flex items-center gap-1">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                    </svg>
+                                    41
+                                </span>
+                            </div>
+                            <button
+                                class="text-primary font-cta font-medium hover:text-primary-600 transition-colors duration-300">
+                                Read More
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-12">
+                <button id="loadMoreBtn" class="btn-accent">
+                    Load More Stories
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section class="section-padding bg-surface">
+        <div class="container mx-auto container-padding">
+            <div class="text-center mb-16 fade-in">
+                <p class="font-accent text-accent text-lg mb-4">Community Gallery</p>
+                <h2 class="font-headline text-primary mb-6">Your Swiss Moments</h2>
+                <p class="text-text-secondary text-lg max-w-2xl mx-auto">
+                    Stunning photography from our community of travelers. Every image tells a story of discovery and
+                    wonder.
+                </p>
+            </div>
+
+            <!-- Photo Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="photoGallery">
+                <div class="relative aspect-square overflow-hidden rounded-lg group cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1570365494323-a7f65e4c6d69"
+                        alt="Majestic Matterhorn peak reflected in crystal-clear alpine lake at golden hour, captured by community member"
+                        class="w-full h-full object-cover transition-transform duration-450 group-hover:scale-110"
+                        loading="lazy"
+                        onerror="this.src='https://images.pexels.com/photos/1450353/pexels-photo-1450353.jpeg?auto=compress&cs=tinysrgb&w=800'; this.onerror=null;">
+                    <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-all duration-300">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-text-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <p class="text-white text-sm font-cta">@sarah_adventures</p>
+                    </div>
+                </div>
+
+                <div class="relative aspect-square overflow-hidden rounded-lg group cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1704566410853-09353410c7ca"
+                        alt="Charming Swiss village street with traditional wooden chalets and flower boxes, photographed by traveler"
+                        class="w-full h-full object-cover transition-transform duration-450 group-hover:scale-110"
+                        loading="lazy"
+                        onerror="this.src='https://img.rocket.new/generatedImages/rocket_gen_img_1ec5d4703-1766760856049.png'; this.onerror=null;">
+                    <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-all duration-300">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-text-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <p class="text-white text-sm font-cta">@james_explorer</p>
+                    </div>
+                </div>
+
+                <div class="relative aspect-square overflow-hidden rounded-lg group cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1613989937169-d7030ca9f7ab"
+                        alt="Scenic Swiss train winding through snow-covered mountain landscape, shared by community photographer"
+                        class="w-full h-full object-cover transition-transform duration-450 group-hover:scale-110"
+                        loading="lazy"
+                        onerror="this.src='https://images.pexels.com/photos/1054218/pexels-photo-1054218.jpeg?auto=compress&cs=tinysrgb&w=800'; this.onerror=null;">
+                    <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-all duration-300">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-text-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <p class="text-white text-sm font-cta">@emma_wanderlust</p>
+                    </div>
+                </div>
+
+                <div class="relative aspect-square overflow-hidden rounded-lg group cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1711249772815-d8dbdaba3df6"
+                        alt="Fresh powder snow on pristine ski slopes with dramatic Alpine backdrop, captured by winter sports enthusiast"
+                        class="w-full h-full object-cover transition-transform duration-450 group-hover:scale-110"
+                        loading="lazy"
+                        onerror="this.src='https://images.unsplash.com/photo-1551524164-687a55dd1126?q=80&w=800&auto=format&fit=crop'; this.onerror=null;">
+                    <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-all duration-300">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-text-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <p class="text-white text-sm font-cta">@david_alpine</p>
+                    </div>
+                </div>
+
+                <div class="relative aspect-square overflow-hidden rounded-lg group cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1527004013197-933c4bb611b3?q=80&w=800&auto=format&fit=crop"
+                        alt="Sunset over Lake Geneva with vineyard terraces in foreground, photographed by wine tour participant"
+                        class="w-full h-full object-cover transition-transform duration-450 group-hover:scale-110"
+                        loading="lazy"
+                        onerror="this.src='https://images.pexels.com/photos/1450353/pexels-photo-1450353.jpeg?auto=compress&cs=tinysrgb&w=800'; this.onerror=null;">
+                    <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-all duration-300">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-text-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <p class="text-white text-sm font-cta">@lisa_vino</p>
+                    </div>
+                </div>
+
+                <div class="relative aspect-square overflow-hidden rounded-lg group cursor-pointer">
+                    <img src="https://img.rocket.new/generatedImages/rocket_gen_img_18ccfe8a0-1766760855527.png"
+                        alt="Traditional Swiss folk dancers in colorful costumes at mountain festival, captured by cultural traveler"
+                        class="w-full h-full object-cover transition-transform duration-450 group-hover:scale-110"
+                        loading="lazy"
+                        onerror="this.src='https://images.unsplash.com/photo-1533105079780-92b9be482077?q=80&w=800&auto=format&fit=crop'; this.onerror=null;">
+                    <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-all duration-300">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-text-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <p class="text-white text-sm font-cta">@michael_culture</p>
+                    </div>
+                </div>
+
+                <div class="relative aspect-square overflow-hidden rounded-lg group cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1638775527752-ecaecc70cd3c"
+                        alt="Cozy Swiss chalet interior with fireplace and mountain views through windows, shared by luxury traveler"
+                        class="w-full h-full object-cover transition-transform duration-450 group-hover:scale-110"
+                        loading="lazy"
+                        onerror="this.src='https://images.pexels.com/photos/1450353/pexels-photo-1450353.jpeg?auto=compress&cs=tinysrgb&w=800'; this.onerror=null;">
+                    <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-all duration-300">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-text-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <p class="text-white text-sm font-cta">@sophia_luxury</p>
+                    </div>
+                </div>
+
+                <div class="relative aspect-square overflow-hidden rounded-lg group cursor-pointer">
+                    <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1bec0ed4c-1766760857281.png"
+                        alt="Family hiking together on scenic Alpine trail with wildflowers, captured by family adventure blogger"
+                        class="w-full h-full object-cover transition-transform duration-450 group-hover:scale-110"
+                        loading="lazy"
+                        onerror="this.src='https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=800&auto=format&fit=crop'; this.onerror=null;">
+                    <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-all duration-300">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-text-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <p class="text-white text-sm font-cta">@rodriguez_family</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- View All Photos Button -->
+            <div class="text-center mt-12">
+                <button class="btn-primary">
+                    View All Photos
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Share Your Story Section -->
+    <section class="section-padding bg-background" id="share-story">
+        <div class="container mx-auto container-padding">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12 fade-in">
+                    <p class="font-accent text-accent text-lg mb-4">Join Our Community</p>
+                    <h2 class="font-headline text-primary mb-6">Share Your Swiss Adventure</h2>
+                    <p class="text-text-secondary text-lg max-w-2xl mx-auto">
+                        Your story could inspire someone's next great adventure. Share your experiences, photos, and
+                        travel tips with our community.
+                    </p>
+                </div>
+
+                <div class="card-elevation rounded-2xl p-8 md:p-12">
+                    <form id="storySubmissionForm" class="space-y-6">
+                        <!-- Name -->
+                        <div>
+                            <label for="authorName" class="form-label">Your Name *</label>
+                            <input type="text" id="authorName" name="authorName" class="form-input"
+                                placeholder="Enter your full name" required>
+                        </div>
+
+                        <!-- Email -->
+                        <div>
+                            <label for="authorEmail" class="form-label">Email Address *</label>
+                            <input type="email" id="authorEmail" name="authorEmail" class="form-input"
+                                placeholder="your.email@example.com" required>
+                        </div>
+
+                        <!-- Story Category -->
+                        <div>
+                            <label for="storyCategory" class="form-label">Story Category *</label>
+                            <select id="storyCategory" name="storyCategory" class="form-input" required>
+                                <option value="">Select a category</option>
+                                <option value="adventure">Adventure</option>
+                                <option value="culture">Culture</option>
+                                <option value="relaxation">Relaxation</option>
+                                <option value="family">Family</option>
+                                <option value="food">Food & Wine</option>
+                                <option value="photography">Photography</option>
+                            </select>
+                        </div>
+
+                        <!-- Story Title -->
+                        <div>
+                            <label for="storyTitle" class="form-label">Story Title *</label>
+                            <input type="text" id="storyTitle" name="storyTitle" class="form-input"
+                                placeholder="Give your story a captivating title" required>
+                        </div>
+
+                        <!-- Story Content -->
+                        <div>
+                            <label for="storyContent" class="form-label">Your Story *</label>
+                            <textarea id="storyContent" name="storyContent" rows="8" class="form-input resize-none"
+                                placeholder="Share your Swiss adventure in detail. What made it special? What would you recommend to others?"
+                                required></textarea>
+                            <p class="text-text-secondary text-sm mt-2">Minimum 200 characters</p>
+                        </div>
+
+                        <!-- Photo Upload -->
+                        <div>
+                            <label for="storyPhotos" class="form-label">Upload Photos (Optional)</label>
+                            <div
+                                class="border-2 border-dashed border-border rounded-lg p-8 text-center hover:border-primary transition-colors duration-300">
+                                <input type="file" id="storyPhotos" name="storyPhotos" accept="image/*" multiple
+                                    class="hidden">
+                                <label for="storyPhotos" class="cursor-pointer">
+                                    <svg class="w-12 h-12 mx-auto mb-4 text-text-secondary" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z">
+                                        </path>
+                                    </svg>
+                                    <p class="text-text-primary font-cta font-medium mb-2">Click to upload photos</p>
+                                    <p class="text-text-secondary text-sm">PNG, JPG up to 10MB each</p>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Social Media Handle -->
+                        <div>
+                            <label for="socialHandle" class="form-label">Instagram Handle (Optional)</label>
+                            <div class="relative">
+                                <span class="absolute left-4 top-1/2 -translate-y-1/2 text-text-secondary">@</span>
+                                <input type="text" id="socialHandle" name="socialHandle" class="form-input pl-8"
+                                    placeholder="your_instagram_handle">
+                            </div>
+                        </div>
+
+                        <!-- Terms Agreement -->
+                        <div class="flex items-start gap-3">
+                            <input type="checkbox" id="termsAgreement" name="termsAgreement"
+                                class="mt-1 w-5 h-5 text-primary border-border rounded focus:ring-2 focus:ring-primary/30"
+                                required>
+                            <label for="termsAgreement" class="text-text-secondary text-sm">
+                                I agree to share my story and photos with the Swiss Journey community. I confirm that I
+                                own the rights to all submitted content and grant permission for it to be featured on
+                                the website and social media channels.
+                            </label>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <button type="submit" class="btn-primary flex-1">
+                                Submit Your Story
+                            </button>
+                            <button type="button" class="btn-secondary flex-1"
+                                onclick="document.getElementById('storySubmissionForm').reset()">
+                                Clear Form
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Success Message -->
+                    <div id="submissionSuccess" class="hidden mt-8 alert-success">
+                        <p class="font-cta font-semibold mb-2">Thank you for sharing your story!</p>
+                        <p>Your submission has been received and will be reviewed by our team. We'll notify you via
+                            email once it's published.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Local Recommendations Section -->
+    <section class="section-padding bg-surface">
+        <div class="container mx-auto container-padding">
+            <div class="text-center mb-16 fade-in">
+                <p class="font-accent text-accent text-lg mb-4">Insider Knowledge</p>
+                <h2 class="font-headline text-primary mb-6">Local Swiss Recommendations</h2>
+                <p class="text-text-secondary text-lg max-w-2xl mx-auto">
+                    Authentic tips from Swiss residents who know their homeland best. Discover hidden gems and local
+                    favorites.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 card-grid">
+                <!-- Local Tip 1 -->
+                <div class="card-elevation rounded-xl p-6">
+                    <div class="flex items-start gap-4 mb-4">
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_117c62db7-1763296190801.png"
+                            alt="Profile photo of Hans Mueller, local Swiss resident and community contributor from Zurich"
+                            class="w-16 h-16 rounded-full object-cover flex-shrink-0" loading="lazy"
+                            onerror="this.src='https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=200'; this.onerror=null;">
+                        <div>
+                            <p class="font-cta font-semibold text-text-primary">Hans Mueller</p>
+                            <p class="text-text-secondary text-sm">Local from Zurich</p>
+                            <div class="flex items-center gap-1 mt-1">
+                                <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <span class="text-text-secondary text-sm">Verified Local</span>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-headline text-primary mb-3">Best Time for Fondue</h3>
+                    <p class="text-text-secondary mb-4">
+                        "Skip the touristy restaurants. Visit 'Zunfthaus zur Waag' on a Tuesday evening for authentic
+                        fondue. Locals know Tuesday is when they make fresh cheese batches. Book ahead!"
+                    </p>
+                    <div class="flex items-center gap-2 text-primary text-sm font-cta">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        Zurich Old Town
+                    </div>
+                </div>
+
+                <!-- Local Tip 2 -->
+                <div class="card-elevation rounded-xl p-6">
+                    <div class="flex items-start gap-4 mb-4">
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1658b37dd-1763299021458.png"
+                            alt="Profile photo of Sophie Dubois, local Swiss resident and community contributor from Geneva"
+                            class="w-16 h-16 rounded-full object-cover flex-shrink-0" loading="lazy"
+                            onerror="this.src='https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=200'; this.onerror=null;">
+                        <div>
+                            <p class="font-cta font-semibold text-text-primary">Sophie Dubois</p>
+                            <p class="text-text-secondary text-sm">Local from Geneva</p>
+                            <div class="flex items-center gap-1 mt-1">
+                                <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <span class="text-text-secondary text-sm">Verified Local</span>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-headline text-primary mb-3">Secret Lake Geneva Spot</h3>
+                    <p class="text-text-secondary mb-4">
+                        "Everyone goes to Jet d'Eau, but locals love Parc La Grange. Bring a picnic, rent a paddleboat,
+                        and watch sunset from the rose garden. It's magical and rarely crowded."
+                    </p>
+                    <div class="flex items-center gap-2 text-primary text-sm font-cta">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        Geneva Lakefront
+                    </div>
+                </div>
+
+                <!-- Local Tip 3 -->
+                <div class="card-elevation rounded-xl p-6">
+                    <div class="flex items-start gap-4 mb-4">
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_117c62db7-1763296190801.png"
+                            alt="Profile photo of Marco Rossi, local Swiss resident and community contributor from Lugano"
+                            class="w-16 h-16 rounded-full object-cover flex-shrink-0" loading="lazy"
+                            onerror="this.src='https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=200'; this.onerror=null;">
+                        <div>
+                            <p class="font-cta font-semibold text-text-primary">Marco Rossi</p>
+                            <p class="text-text-secondary text-sm">Local from Lugano</p>
+                            <div class="flex items-center gap-1 mt-1">
+                                <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <span class="text-text-secondary text-sm">Verified Local</span>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-headline text-primary mb-3">Hidden Hiking Trail</h3>
+                    <p class="text-text-secondary mb-4">
+                        "Take the Monte Brè funicular early morning. The trail to Gandria village is stunning and empty
+                        before 9 AM. Stop at Grotto Morchino for the best polenta you'll ever taste."
+                    </p>
+                    <div class="flex items-center gap-2 text-primary text-sm font-cta">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        Lugano Region
+                    </div>
+                </div>
+            </div>
+
+            <!-- More Local Tips Button -->
+            <div class="text-center mt-12">
+                <button class="btn-accent">
+                    View More Local Tips
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Feed Section -->
+    <section class="section-padding bg-background">
+        <div class="container mx-auto container-padding">
+            <div class="text-center mb-16 fade-in">
+                <p class="font-accent text-accent text-lg mb-4">Follow Our Journey</p>
+                <h2 class="font-headline text-primary mb-6">#SwissJourneyMoments</h2>
+                <p class="text-text-secondary text-lg max-w-2xl mx-auto mb-8">
+                    Join the conversation on social media. Share your Swiss moments and connect with fellow travelers
+                    worldwide.
+                </p>
+                <div class="flex justify-center gap-4">
+                    <a href="javascript:void(0)"
+                        class="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg font-cta font-medium hover:bg-primary-600 transition-colors duration-300">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg>
+                        Follow on Instagram
+                    </a>
+                    <a href="javascript:void(0)"
+                        class="inline-flex items-center gap-2 px-6 py-3 bg-secondary text-white rounded-lg font-cta font-medium hover:bg-secondary-600 transition-colors duration-300">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                        </svg>
+                        Join on Facebook
+                    </a>
+                </div>
+            </div>
+
+            <!-- Instagram-style Feed Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="relative aspect-square overflow-hidden rounded-lg">
+                    <img src="https://images.unsplash.com/photo-1595090947130-23c5948a2993"
+                        alt="Instagram post showing Matterhorn peak at sunrise with vibrant orange and pink sky, shared by community member"
+                        class="w-full h-full object-cover" loading="lazy"
+                        onerror="this.src='https://images.pexels.com/photos/1660995/pexels-photo-1660995.jpeg?auto=compress&cs=tinysrgb&w=600'; this.onerror=null;">
+                </div>
+                <div class="relative aspect-square overflow-hidden rounded-lg">
+                    <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1ea662fa4-1764656255188.png"
+                        alt="Instagram post featuring traditional Swiss breakfast spread with fresh bread, cheese, and mountain views"
+                        class="w-full h-full object-cover" loading="lazy"
+                        onerror="this.src='https://images.unsplash.com/photo-1527004013197-933c4bb611b3?q=80&w=600&auto=format&fit=crop'; this.onerror=null;">
+                </div>
+                <div class="relative aspect-square overflow-hidden rounded-lg">
+                    <img src="https://images.unsplash.com/photo-1712954601619-a6abdf0f5d0b"
+                        alt="Instagram post of scenic train journey through Swiss Alps with snow-covered peaks visible through windows"
+                        class="w-full h-full object-cover" loading="lazy"
+                        onerror="this.src='https://images.pexels.com/photos/1054218/pexels-photo-1054218.jpeg?auto=compress&cs=tinysrgb&w=600'; this.onerror=null;">
+                </div>
+                <div class="relative aspect-square overflow-hidden rounded-lg">
+                    <img src="https://images.unsplash.com/photo-1605540539794-6e7f0b4ebf4b"
+                        alt="Instagram post capturing skier carving through fresh powder snow with dramatic mountain backdrop"
+                        class="w-full h-full object-cover" loading="lazy"
+                        onerror="this.src='https://images.unsplash.com/photo-1551524164-687a55dd1126?q=80&w=600&auto=format&fit=crop'; this.onerror=null;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary-900 text-white section-padding">
+        <div class="container mx-auto container-padding">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Brand Column -->
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <svg width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 38L16 18L24 28L32 14L44 38H4Z" fill="#7BA05B" />
+                            <path d="M12 38L20 24L28 32L36 22L44 38H12Z" fill="#D4AF37" opacity="0.6" />
+                            <path d="M16 18L18 22L14 22L16 18Z" fill="white" />
+                            <path d="M32 14L35 20L29 20L32 14Z" fill="white" />
+                            <rect x="2" y="36" width="44" height="3" fill="#1a3a28" />
+                            <rect x="8" y="28" width="20" height="8" rx="2" fill="#D4AF37" />
+                            <circle cx="12" cy="36" r="2" fill="#1a3a28" />
+                            <circle cx="24" cy="36" r="2" fill="#1a3a28" />
+
+                            <circle cx="24" cy="24" r="4" fill="#D4AF37" />
+                        </svg>
+                        <span class="font-headline text-xl font-semibold">Swiss Journey</span>
+                    </div>
+                    <p class="text-white/70 mb-6">
+                        Your personal gateway to authentic Swiss experiences. Discover Switzerland's soul, not just its
+                        sights.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="javascript:void(0)"
+                            class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors duration-300"
+                            aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)"
+                            class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors duration-300"
+                            aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)"
+                            class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors duration-300"
+                            aria-label="Twitter">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Explore Column -->
+                <div>
+                    <h4 class="font-headline text-lg mb-6">Explore</h4>
+                    <ul class="space-y-3">
+                        <li><a href="destination.html"
+                                class="text-white/70 hover:text-white transition-colors duration-300">Destinations</a>
+                        </li>
+                        <li><a href="journey_planner.html"
+                                class="text-white/70 hover:text-white transition-colors duration-300">Journey
+                                Planner</a></li>
+                        <li><a href="about.html"
+                                class="text-white/70 hover:text-white transition-colors duration-300">About
+                                Switzerland</a></li>
+                        <li><a href="community.html"
+                                class="text-white/70 hover:text-white transition-colors duration-300">Community
+                                Stories</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources Column -->
+                <div>
+                    <h4 class="font-headline text-lg mb-6">Resources</h4>
+                    <ul class="space-y-3">
+                        <li><a href="javascript:void(0)"
+                                class="text-white/70 hover:text-white transition-colors duration-300">Travel Guides</a>
+                        </li>
+                        <li><a href="javascript:void(0)"
+                                class="text-white/70 hover:text-white transition-colors duration-300">Cultural
+                                Etiquette</a></li>
+                        <li><a href="javascript:void(0)"
+                                class="text-white/70 hover:text-white transition-colors duration-300">Transportation
+                                Tips</a></li>
+                        <li><a href="javascript:void(0)"
+                                class="text-white/70 hover:text-white transition-colors duration-300">Language
+                                Basics</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Column -->
+                <div>
+                    <h4 class="font-headline text-lg mb-6">Get in Touch</h4>
+                    <ul class="space-y-3">
+                        <li><a href="contact.html"
+                                class="text-white/70 hover:text-white transition-colors duration-300">Contact Us</a>
+                        </li>
+                        <li><a href="javascript:void(0)"
+                                class="text-white/70 hover:text-white transition-colors duration-300">FAQ</a></li>
+                        <li><a href="javascript:void(0)"
+                                class="text-white/70 hover:text-white transition-colors duration-300">Travel
+                                Consultation</a></li>
+                        <li><a href="javascript:void(0)"
+                                class="text-white/70 hover:text-white transition-colors duration-300">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-white/70 text-sm">© 2025 Swiss Journey. All Rights Reserved.</p>
+                    <div class="flex gap-6">
+                        <a href="javascript:void(0)"
+                            class="text-white/70 hover:text-white text-sm transition-colors duration-300">Privacy
+                            Policy</a>
+                        <a href="javascript:void(0)"
+                            class="text-white/70 hover:text-white text-sm transition-colors duration-300">Terms of
+                            Service</a>
+                        <a href="javascript:void(0)"
+                            class="text-white/70 hover:text-white text-sm transition-colors duration-300">Cookie
+                            Settings</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Sticky Header
+        const header = document.getElementById('mainHeader');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > 100) {
+                header.classList.add('shadow-lg');
+            } else {
+                header.classList.remove('shadow-lg');
+            }
+
+            lastScroll = currentScroll;
+        });
+
+        // Personalized Greeting
+        const greetingElement = document.getElementById('communityGreeting');
+        const storedName = localStorage.getItem('userName');
+
+        if (storedName) {
+            greetingElement.textContent = `Welcome Back, ${storedName}!`;
+        }
+
+        // Filter Tabs Functionality
+        const filterTabs = document.querySelectorAll('.filter-tab');
+        const storyCards = document.querySelectorAll('[data-category]');
+
+        filterTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const filter = tab.dataset.filter;
+
+                // Update active tab
+                filterTabs.forEach(t => {
+                    t.classList.remove('active', 'bg-primary', 'text-white');
+                    t.classList.add('bg-surface', 'text-text-secondary');
+                });
+                tab.classList.add('active', 'bg-primary', 'text-white');
+                tab.classList.remove('bg-surface', 'text-text-secondary');
+
+                // Filter stories
+                storyCards.forEach(card => {
+                    if (filter === 'all' || card.dataset.category === filter) {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 10);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Initialize first tab as active
+        filterTabs[0].classList.add('active', 'bg-primary', 'text-white');
+
+        // Story Submission Form
+        const storyForm = document.getElementById('storySubmissionForm');
+        const submissionSuccess = document.getElementById('submissionSuccess');
+
+        storyForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Get form data
+            const formData = new FormData(storyForm);
+            const storyData = {
+                name: formData.get('authorName'),
+                email: formData.get('authorEmail'),
+                category: formData.get('storyCategory'),
+                title: formData.get('storyTitle'),
+                content: formData.get('storyContent'),
+                socialHandle: formData.get('socialHandle'),
+                timestamp: new Date().toISOString()
+            };
+
+            // Store in localStorage (in production, this would be sent to a server)
+            let stories = JSON.parse(localStorage.getItem('communityStories') || '[]');
+            stories.push(storyData);
+            localStorage.setItem('communityStories', JSON.stringify(stories));
+
+            // Show success message
+            submissionSuccess.classList.remove('hidden');
+            storyForm.reset();
+
+            // Scroll to success message
+            submissionSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+            // Hide success message after 10 seconds
+            setTimeout(() => {
+                submissionSuccess.classList.add('hidden');
+            }, 10000);
+        });
+
+        // Load More Stories
+        const loadMoreBtn = document.getElementById('loadMoreBtn');
+        let currentPage = 1;
+
+        loadMoreBtn.addEventListener('click', () => {
+            // In production, this would load more stories from the server
+            loadMoreBtn.textContent = 'Loading...';
+
+            setTimeout(() => {
+                loadMoreBtn.textContent = 'Load More Stories';
+                // Simulate loading more content
+                currentPage++;
+            }, 1000);
+        });
+
+        // Animate community stats on scroll
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateValue('totalStories', 0, 2847, 2000);
+                    animateValue('totalPhotos', 0, 15392, 2000);
+                    animateValue('activeTravelers', 0, 8456, 2000);
+                    animateValue('newsletterSubs', 0, 12234, 2000);
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const statsSection = document.querySelector('.absolute.bottom-8');
+        if (statsSection) {
+            statsObserver.observe(statsSection);
+        }
+
+        function animateValue(id, start, end, duration) {
+            const element = document.getElementById(id);
+            if (!element) return;
+
+            const range = end - start;
+            const increment = range / (duration / 16);
+            let current = start;
+
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= end) {
+                    element.textContent = end.toLocaleString();
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current).toLocaleString();
+                }
+            }, 16);
+        }
+
+        // Fade-in Animation on Scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Photo Upload Preview
+        const photoInput = document.getElementById('storyPhotos');
+
+        photoInput.addEventListener('change', (e) => {
+            const files = e.target.files;
+            if (files.length > 0) {
+                const label = photoInput.nextElementSibling;
+                const fileNames = Array.from(files).map(f => f.name).join(', ');
+                label.querySelector('p.text-text-primary').textContent = `${files.length} photo(s) selected`;
+            }
+        });
+    </script>
+    <script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+
+</html>
