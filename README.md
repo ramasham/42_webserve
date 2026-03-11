@@ -142,6 +142,7 @@ Used to send data to the server, including forms and file uploads.
 
 ### DELETE
 Used to remove resources when the route allows it.
+
 ---
 
 ## 📄 Static File Serving
