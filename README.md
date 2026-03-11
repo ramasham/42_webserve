@@ -2,6 +2,14 @@
   <img src="https://capsule-render.vercel.app/api?type=rounded&color=8B5CF6&height=140&section=header&text=webserv&fontSize=42&fontColor=ffffff&animation=fadeIn&desc=A%20Custom%20HTTP%20Server%20in%20C%2B%2B&descAlignY=70&descSize=18" />
 </p>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/C++-A78BFA?style=for-the-badge&logo=cplusplus&logoColor=white" />
+  <img src="https://img.shields.io/badge/HTTP%2F1.1-C4B5FD?style=for-the-badge&logo=internetexplorer&logoColor=1E1B4B" />
+  <img src="https://img.shields.io/badge/epoll-D9F99D?style=for-the-badge&logo=linux&logoColor=365314" />
+  <img src="https://img.shields.io/badge/CGI-FBCFE8?style=for-the-badge&logo=gnubash&logoColor=831843" />
+  <img src="https://img.shields.io/badge/Linux-FDE68A?style=for-the-badge&logo=linux&logoColor=854D0E" />
+</p>
+
 A lightweight HTTP server built from scratch in **C++** as part of the **42 curriculum**.  
 This project was designed to explore how web servers work internally by implementing core features such as **socket programming**, **HTTP request parsing**, **epoll-based event handling**, **configuration parsing**, and **CGI execution**.
 
